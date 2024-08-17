@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="categorias-text">
                 <span>Todas as categorias</span>
             </div>
-            <img src="../assets/images/todasascategorias.webp" alt="Todas as Categorias" id="todasascategorias-img">
+            <img src="assets/images/todasascategorias.webp" alt="Todas as Categorias" id="todasascategorias-img">
         `;
         bannerProdutosContainer.appendChild(maisCategoriasDiv);
 
