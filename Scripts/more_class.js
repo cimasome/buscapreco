@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Carregar e criar categorias ao iniciar
-    fetch('../pdcts/Todos%20os%20produtos.json')
+    fetch("pdcts/Todos%20os%20produtos.json')
         .then(response => response.json())
         .then(data => {
             criarCategoriasDinamicamente(data);
