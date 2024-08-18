@@ -1,5 +1,5 @@
 window.onload = function() {
-    loadAndDisplayProducts('pdcts/Todos%20os%20produtos.json.json', 'mais-vendidos');
+    loadAndDisplayProducts('pdcts/Todos%20os%20produtos.json', 'mais-vendidos');
     loadAndDisplayProducts('pdcts/infoprodutos.json', 'info-produtos'); // Adicionando o segundo carregamento de produtos
 };
 
