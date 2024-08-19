@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         classesAleatorias.forEach(classe => {
             const novoLink = document.createElement('a');
             novoLink.classList.add('categorias');
-            novoLink.href = `products.html?classe=${encodeURIComponent(classe)}`;
+            novoLink.href = `../html/products.html?classe=${encodeURIComponent(classe)}`;
             novoLink.textContent = classe;
 
             // Criar a imagem baseada no nome da classe
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         categoriasUnicas.forEach(categoria => {
             const categoriaElemento = document.createElement('a');
             categoriaElemento.classList.add('popup-category-item');
-            categoriaElemento.href = `products.html?classe=${encodeURIComponent(classeEscolhida)}&categoria=${encodeURIComponent(categoria)}`;
+            categoriaElemento.href = `../html/products.html?classe=${encodeURIComponent(classeEscolhida)}&categoria=${encodeURIComponent(categoria)}`;
             categoriaElemento.textContent = categoria;
             popupCategoriasContainer.appendChild(categoriaElemento);
         });
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     verTodosProdutosButton.addEventListener('click', function() {
-        window.location.href = `products.html?classe=${encodeURIComponent(classeEscolhida)}`;
+        window.location.href = `../html/products.html?classe=${encodeURIComponent(classeEscolhida)}`;
     });
 
     popupCategorias.addEventListener('click', function(event) {
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Carregar e criar categorias ao iniciar
-    fetch("pdcts/Todos%20os%20produtos.json')
+    fetch("../pdcts/Todos%20os%20produtos.json')
         .then(response => response.json())
         .then(data => {
             criarCategoriasDinamicamente(data);
