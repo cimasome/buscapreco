@@ -28,7 +28,7 @@ function fecharMeuPopup(event) {
 // Função para atualizar a imagem conforme o tamanho da tela
 function updatePopupImage() {
     var img = document.querySelector('.meu-popup-img');
-    if (window.innerWidth <= 1200) {
+    if (window.innerWidth <= 520) {
         img.src = img.getAttribute('data-src-small');
     } else {
         img.src = "assets/images/popup.webp";
