@@ -128,11 +128,9 @@ function createProductElement(row) {
     // Remover a parte relacionada à criação de preços
     // priceContainer e seus elementos (originalPrice e productPrice) foram removidos.
 
-    // Imagem do produto
+   // Imagem do produto
     const productImage = document.createElement('img');
-    let imageUrl = row['URL'] ? decodeURIComponent(row['URL']) : '';
-    imageUrl = imageUrl.replace(/^\.\.\//, 'assets/');
-    productImage.src = imageUrl;
+    productImage.src = row['URL'] ? decodeURIComponent(row['URL']) : ''; // Decodifica a URL da imagem, se existir
     productImage.alt = row['Nome'] || 'Produto sem nome';
     productImage.classList.add('product-image');
 
