@@ -130,7 +130,9 @@ function createProductElement(row) {
 
     // Imagem do produto
     const productImage = document.createElement('img');
-    productImage.src = row['URL'] ? decodeURIComponent(row['URL']) : ''; // Decodifica a URL da imagem, se existir
+    let imageUrl = row['URL'] ? decodeURIComponent(row['URL']) : '';
+    imageUrl = imageUrl.replace(/^\.\.\//, 'assets/');
+    productImage.src = imageUrl;
     productImage.alt = row['Nome'] || 'Produto sem nome';
     productImage.classList.add('product-image');
 
