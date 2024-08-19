@@ -814,7 +814,32 @@ section.slider {
         min-height: 380px;
     }
 }
-@media (max-width: 428px) {
+@media (max-width: 720px) {
+    .melhores {
+        font-size: 0.7em;
+    }
+    .buscados h1 {
+        font-size: 1.5em;
+    }
+    #loadMoreBtn {
+        font-size: small;
+    }
+    .popup {
+        width: 90%;
+    }
+    .yes-button, .no-button {
+        width: 45%;
+        font-size:0.8em;
+    }
+    .popup-content {
+        padding: 10px;
+    }
+    .linha {
+        padding: 1.5%;
+    }
+    .rodape {
+        height: 100px;
+    }
     .logo a {
         background-image: url(../images/Logo_mobile.webp);
         width: 100px;
@@ -1054,34 +1079,6 @@ section.slider {
 @media (min-width: 2700px) {
     .product-links a img {
         width: 20%; 
-    }
-}
-@media (max-width: 520px) {
-    .melhores {
-        font-size: 0.7em;
-    }
-    .buscados h1 {
-        font-size: 1.5em;
-    }
-    #loadMoreBtn {
-        font-size: small;
-    }
-    .popup {
-        width: 90%;
-    }
-    .yes-button, .no-button {
-        width: 45%;
-        font-size:0.8em;
-    }
-    .popup-content {
-        padding: 10px;
-    }
-    .linha {
-        padding: 1.5%;
-        font-size: 0.7em;
-    }
-    .rodape {
-        height: 100px;
     }
 }
 @media (max-width: 325px) {
