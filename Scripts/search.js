@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carregar produtos
     function loadProducts() {
-        fetch('../pdcts/Todos%20os%20produtos.json')
+        fetch('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json')
             .then(response => response.json())
             .then(data => {
                 products = data;
