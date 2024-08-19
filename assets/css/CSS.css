@@ -5,7 +5,7 @@ body{
     margin: 0;
     background-color: rgb(240, 240, 240);
     font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;}
+    font-optical-sizing: auto;
 /*A partir dessa linha inicia o cabeçalho*/
 .melhores {
     background: linear-gradient(360deg, #EA6900 10%, rgb(10, 2, 69) 30%);
@@ -814,23 +814,12 @@ section.slider {
         min-height: 380px;
     }
 }
-@media (max-width: 720px) {        
-    .product-links {
-        grid-template-columns: repeat(2, 50%); /* Uma coluna para dispositivos móveis */
-    } 
+@media (max-width: 428px) {
     .logo a {
         background-image: url(../images/Logo_mobile.webp);
         width: 100px;
         height: 85px;    
     }
-    .banner-produtos {
-        grid-template-columns: repeat(2, 50%); /* Uma coluna para dispositivos móveis */
-    }
-    .product-container{
-        min-height: 400px;
-    }
-}   
-@media (max-width: 428px) {
     .banner-fila{
         flex-direction: column;
     }
