@@ -5,7 +5,7 @@ setTimeout(function() {
     popupContainer.className = 'meu-popup-wrapper';
     popupContainer.innerHTML = `
         <div class="meu-popup-content">
-            <img src="../assets/images/popup.webp" data-src-small="../assets/images/popupm.webp" alt="Anúncio" class="meu-popup-img">
+            <img src="assets/images/popup.webp" data-src-small="assets/images/popupm.webp" alt="Anúncio" class="meu-popup-img">
             <div class="meu-popup-buttons">
                 <a href="https://amzn.to/3yjuwyw" class="meu-popup-button" target="_blank">Comprar agora</a>
                 <a href="#" class="meu-popup-button" onclick="fecharMeuPopup(event)">Fechar anúncio</a>
@@ -31,7 +31,7 @@ function updatePopupImage() {
     if (window.innerWidth <= 1200) {
         img.src = img.getAttribute('data-src-small');
     } else {
-        img.src = "../assets/images/popup.webp";
+        img.src = "assets/images/popup.webp";
     }
 }
 
