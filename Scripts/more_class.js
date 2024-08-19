@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let numeroDeClasses = 4; // Valor padrão
 
         // Ajustar o número de classes com base na largura da tela
-        if (window.matchMedia('(max-width: 428px)').matches) {
+        if (window.matchMedia('(max-width: 520px)').matches) {
             numeroDeClasses = 5;
         }
 
