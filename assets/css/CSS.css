@@ -809,7 +809,7 @@ section.slider {
     }
     .meu-popup-content {
         width: 90%; /* Ajuste para ocupar 90% da largura da tela */
-        height: 95%; /* Ajuste para ocupar 90% da altura da tela */
+        height: 100%; /* Ajuste para ocupar 90% da altura da tela */
     }
     .meu-popup-buttons {
         top: 80%;
