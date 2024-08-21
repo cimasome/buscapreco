@@ -1,6 +1,6 @@
 window.onload = function() {
-    loadAndDisplayProducts('pdcts/Todos%20os%20produtos.json', 'mais-vendidos');
-    loadAndDisplayProducts('pdcts/infoprodutos.json', 'info-produtos'); // Adicionando o segundo carregamento de produtos
+    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/Products/main/Todos%20os%20produtos.json', 'mais-vendidos');
+    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/Products/main/infoprodutos.json', 'info-produtos'); // Adicionando o segundo carregamento de produtos
 };
 
 // Variável para controlar a quantidade máxima de itens
@@ -128,6 +128,7 @@ function createProductElement(row) {
     // Remover a parte relacionada à criação de preços
     // priceContainer e seus elementos (originalPrice e productPrice) foram removidos.
 
+    // Imagem do produto
    // Imagem do produto
     const productImage = document.createElement('img');
     productImage.src = row['URL'] ? decodeURIComponent(row['URL']) : ''; // Decodifica a URL da imagem, se existir
