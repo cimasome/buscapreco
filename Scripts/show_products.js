@@ -131,10 +131,10 @@ function createProductElement(row) {
     // Imagem do produto
     // Imagem do produto
     const productImage = document.createElement('img');
-    
-    // Remover a expressão "../" da URL e adicionar a inicial "assets" se necessário
+
+    // Remover a expressão "../" da URL, se presente
     let imageUrl = row['URL'] ? decodeURIComponent(row['URL']) : '';
-    imageUrl = imageUrl.replace(/^\.\.\//, 'assets/');
+    imageUrl = imageUrl.replace(/^\.\.\//, ''); // Remove "../" do início da URL
     
     productImage.src = imageUrl;
     productImage.alt = row['Nome'] || 'Produto sem nome';
