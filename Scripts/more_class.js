@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 bannerProdutos.style.display = 'none';
                 categoriasContainer.innerHTML = '';
 
-                fetch('https://raw.githubusercontent.com/cimasome/Products/main/Todos%20os%20produtos.json')
+                fetch('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json')
                     .then(response => response.json())
                     .then(data => {
                         const classesCriadas = [];
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Carregar e criar categorias ao iniciar
-    fetch('https://raw.githubusercontent.com/cimasome/Products/main/Todos%20os%20produtos.json')
+    fetch('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json')
         .then(response => response.json())
         .then(data => {
             criarCategoriasDinamicamente(data);
