@@ -1,6 +1,6 @@
 window.onload = function() {
-    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/Products/main/Todos%20os%20produtos.json', 'mais-vendidos');
-    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/Products/main/infoprodutos.json', 'info-produtos'); // Adicionando o segundo carregamento de produtos
+    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json', 'mais-vendidos');
+    loadAndDisplayProducts('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/infoprodutos.json', 'info-produtos'); // Adicionando o segundo carregamento de produtos
 };
 
 // Variável para controlar a quantidade máxima de itens
