@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Criar a imagem baseada no nome da classe
                 const novaImagem = document.createElement('img');
-                novaImagem.src = `../assets/images/${encodeURIComponent(classe)}.webp`;
+                novaImagem.src = `assets/images/${encodeURIComponent(classe)}.webp`;
                 novaImagem.alt = `Imagem da categoria ${classe}`;
                 novoLink.appendChild(novaImagem);
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="categorias-text">
                     <span>Todas as categorias</span>
                 </div>
-                <img src="../assets/images/todasascategorias.webp" alt="Todas as Categorias" id="todasascategorias-img">
+                <img src="assets/images/todasascategorias.webp" alt="Todas as Categorias" id="todasascategorias-img">
             `;
             bannerProdutosContainer.appendChild(maisCategoriasDiv);
 
