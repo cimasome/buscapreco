@@ -913,6 +913,9 @@ section.slider {
         width: 45%;
         font-size: 1.5vh;
     }
+    .categorias.exibidas, .mostrar-menos-link {
+        font-size: 2vh;
+    }
 }
 @media (min-width: 1001px) {
     .product-links {
