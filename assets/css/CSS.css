@@ -915,6 +915,7 @@ section.slider {
     }
     .categorias.exibidas, .mostrar-menos-link {
         font-size: 2vh;
+        min-height: 140px;
     }
 }
 @media (min-width: 1001px) {
