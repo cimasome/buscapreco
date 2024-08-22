@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     verTodosProdutosButton.addEventListener('click', function() {
-        window.location.href = `products.html?classe=${encodeURIComponent(classeEscolhida)}`;
+        window.location.href = `html/products.html?classe=${encodeURIComponent(classeEscolhida)}`;
     });
 
     popupCategorias.addEventListener('click', function(event) {
