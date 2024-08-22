@@ -909,6 +909,10 @@ section.slider {
     .popup {
         width: 80%;
     }
+      #loadMoreBtn {
+        width: 45%;
+        font-size: 1.5vh;
+    }
 }
 @media (min-width: 1001px) {
     .product-links {
