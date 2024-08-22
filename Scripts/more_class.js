@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentClasses.forEach(classe => {
                 const novoLink = document.createElement('a');
                 novoLink.classList.add('categorias');
-                novoLink.href = `products.html?classe=${encodeURIComponent(classe)}`;
+                novoLink.href = `html/products.html?classe=${encodeURIComponent(classe)}`;
                 novoLink.textContent = classe;
 
                 // Criar a imagem baseada no nome da classe
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         categoriasUnicas.forEach(categoria => {
             const categoriaElemento = document.createElement('a');
             categoriaElemento.classList.add('popup-category-item');
-            categoriaElemento.href = `products.html?classe=${encodeURIComponent(classeEscolhida)}&categoria=${encodeURIComponent(categoria)}`;
+            categoriaElemento.href = `html/products.html?classe=${encodeURIComponent(classeEscolhida)}&categoria=${encodeURIComponent(categoria)}`;
             categoriaElemento.textContent = categoria;
             popupCategoriasContainer.appendChild(categoriaElemento);
         });
