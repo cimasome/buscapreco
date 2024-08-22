@@ -1,0 +1,1256 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;}
+/*A partir dessa linha inicia o cabeçalho*/
+.melhores {
+    background: linear-gradient(360deg, #EA6900 10%, rgb(10, 2, 69) 30%);
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.2% 0% 0.5% 0%;
+    font-weight: 500;
+}
+.cabeça{
+    background-color: #EA6900; 
+}
+.head {
+    display: flex;
+    width: 100%;
+    padding: 2%;    
+    background-color: #EA6900;
+}    
+.logo { 
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.logo a {
+    width: 400px;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/Logo.webp);
+}
+.box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: -100px;
+    transition: top 0.4s ease-in-out, opacity 0.4s ease;
+    opacity: 1;
+    box-shadow: black 1px -1px 5px;
+}
+.box:hover > :not(:hover) {
+    opacity: .2;
+    transform: scale(0.9);
+    border: none;
+}
+.box a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    gap: 2%;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 0.1% 0% 0.1% 0%;
+    font-weight: 500;
+}
+.box a:hover {
+    transition: 1s;
+    color: black;
+    font-weight: 700;
+}
+/*A partir dessa linha encerra o cabeçalho;*/
+/*A partir dessa linha inicia a página inicial;*/
+.slider {
+    padding-top: 5%;
+    position: relative;
+}
+section.slider {
+    margin: 0 auto;
+    top: 10px;
+    width: 96%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url(../images/Slide_background.webp);
+    background-position: right center;
+    background-size: 100%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+.slider-content {
+    display: flex;
+    width: 300%; /* Adjust this to 300% to fit three slides */
+    transition: margin-left 0.5s ease-in-out;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.slider-content input, .img-mobile {
+    display: none;
+}
+.slide-box {
+    width: 33.33%; /* Adjust this to fit three slides within the slider-content */
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+.slide-box a img {
+    width: 100%;
+}
+.grid-home-two{
+    width:90%;
+    margin: 1% 5% 3% 5%;
+}
+.buscados{
+    margin: 0 auto;
+    width: 100%;
+}
+.Classe {
+    width: 100%;
+}
+.buscados h1, .Classe h1 {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+    position: relative;     
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+.buscados h1::after, .Classe h1::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #eaa000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;         
+}
+.buscados h1:hover::after, .Classe h1:hover::after {
+    width: 0%;
+}
+.banner-produtos {
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1%;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.8vh;
+}
+.banner-produtos > *:empty {
+    display: none;
+}
+.banner-produtos:hover > :not(:hover) {
+    transform: scale(0.9);
+    border: none;
+    transition: 0.8s;           
+}
+.categorias {
+    display: flex;
+    flex-direction: column; /* Define o layout em coluna para alinhar verticalmente */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 5px;
+    padding: 5%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(10px); /* Inicialmente deslocado */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    gap: 5px;
+}
+#categorias-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 19.3%);
+    grid-auto-rows: 50px; /* Altura fixa para as linhas do grid */
+    gap: 1%;
+    row-gap: 5%;
+}
+.categorias.exibidas, .mostrar-menos-link, .mostrar-todos-link {
+    background-color: #EA6900; /* Fundo vermelho para categorias quando estão sendo exibidas */
+    color: white;
+    transform: translateY(0);
+    opacity: 1; /* Exibir */
+}
+.mostrar-menos-link {
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+.categorias.exibidas:hover,.mostrar-menos-link:hover, .mostrar-todos-link:hover {
+    background-color: #eaa000; /* Cor mais clara ao passar o mouse */
+}
+.categorias:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.categorias img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    max-height: 200px; /* Limita a altura máxima da imagem */
+    margin-top: auto; /* Alinha a imagem ao final do container */
+}
+.suggestions-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: absolute; /* Mantém a posição absoluta para garantir que fique abaixo da barra de pesquisa */
+    width: calc(100% - 2px); /* Ajuste conforme necessário */
+    background-color: #fff; /* Cor de fundo branca */
+    z-index: 1000; /* Garante que o container fique sobre outros elementos */
+    display: none; /* Inicialmente escondida */
+    flex-wrap: wrap; /* Permite que as sugestões se ajustem em linhas */
+    gap: 10px; /* Espaçamento entre os itens */
+    top: 100%; /* Posiciona a caixa logo abaixo do elemento pai (barra de pesquisa) */
+    left: 0; /* Alinha a caixa com o início do elemento pai */
+    box-sizing: border-box;
+    padding: 5px; /* Ajuste o padding conforme necessário */
+}
+
+.suggestions-categories {
+    display: flex;
+    flex-direction: column; /* Alinha as categorias em uma coluna */
+    gap: 5px; /* Espaçamento entre categorias */
+}
+
+.suggestions-products {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens de produtos se ajustem em linhas */
+    gap: 10px; /* Espaçamento entre itens */
+}
+
+.suggestion-item {
+    display: flex;
+    flex-direction: column; /* Ajusta a direção dos itens para coluna */
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(25% - 10px); /* Ajusta o item para ocupar aproximadamente 25% do espaço disponível, considerando o gap */
+    box-sizing: border-box;
+    padding: 5px; /* Diminui o padding */
+    min-width: 100px; /* Define um tamanho mínimo para garantir que os itens não fiquem muito pequenos */
+}
+
+.suggestion-item img {
+    max-width: 100%;
+    max-height: 100px; /* Tamanho da imagem pequeno */
+    object-fit: cover;
+}
+
+.item-name {
+    margin-top: 4px; /* Espaçamento entre a imagem e o nome */
+    font-size: 2vh; /* Tamanho da fonte pequena */
+    text-align: center; /* Centraliza o texto */
+    overflow: hidden; /* Esconde o excesso de texto */
+    text-overflow: ellipsis; /* Adiciona reticências (...) para texto excedente */
+    line-clamp: 3; /* Limita a 3 linhas */
+    -webkit-box-orient: vertical;
+}
+
+.suggestion-item:hover {
+    transform: scale(0.99);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.suggestions-categories {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap; /* Mantém as categorias em uma única linha */
+    gap: 5px; /* Espaçamento entre categorias */
+    overflow-x: auto; /* Permite rolagem horizontal se as categorias excederem o tamanho do container */
+    padding: 5px; /* Padding ao redor das categorias */
+}
+
+.category-suggestion {
+    background-color: #ea6900; /* Cor de fundo laranja */
+    color: white; /* Texto branco */
+    padding: 8px; /* Ajuste o padding para maior espaçamento */
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+}
+
+.category-suggestion p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+    font-size: 2vh; /* Aumenta o tamanho da fonte */
+    font-weight: 500; /* Adiciona um pouco mais de peso ao texto */
+}
+  
+.category-suggestion:hover {
+    background-color: #d85b00; /* Cor de fundo laranja mais escura ao passar o mouse */
+}
+.search-box {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Necessário para posicionar a caixa de sugestões abaixo */
+}
+.search-container {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#searchInput {
+    width: calc(100% - 6%);
+    padding: 1%;
+    border: none; /* Remove a borda */
+    background-color: rgb(255, 255, 255);
+    outline: none; /* Remove a borda ao focar */
+    height: 40px; /* Ajusta a altura da barra de pesquisa */
+    font-size: 2.2vh;
+}
+#searchInput::placeholder {
+    color: #888;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 1; /* Para garantir que a cor do placeholder seja aplicada */
+}
+#searchBtn {
+    font-size: 2.5vh;
+    width: 6%;
+    border: none;
+    background-color: rgb(74, 74, 221);
+    color: white;
+    cursor: pointer;
+}
+#searchBtn:hover {
+    background-color: #ffb374;
+}
+.link-banner {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+.link-banner img{
+    width: 100%;
+}
+/* Estilos para o contêiner principal .grid-home */
+.grid-home {
+    width: 90%;
+    padding: 2% 0;
+    margin: 0 auto;
+}
+.show {
+    display: flex;
+    width: 97%;
+    margin: 5% 0% 5% 0%;
+}
+.showing {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+}
+.product-links {
+    display: grid;
+    grid-template-columns: repeat(2, 50%); /* Uma coluna para dispositivos móveis */
+    gap: 20px; /* Espaço entre os itens */
+}
+.produto {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    height: 100%; /* Para ocupar toda a altura do elemento pai */
+}
+.product-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; /* Distribui o espaço disponível entre os itens */
+    text-align: center;
+    height: auto; /* Ajusta a altura com base no conteúdo */
+    gap: 3px; /* Ajusta o espaçamento entre os itens para 3px */
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+.product-info {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o conteúdo na parte inferior do contêiner */
+}
+.intra-titulo {
+    font-size: 2vh;
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Número máximo de linhas a serem exibidas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    line-clamp: 3;
+    min-height: 60px; /* Define uma altura mínima para o título */
+}
+.vendidos {
+    font-size: 1vh;
+    font-weight: 500;
+    margin: 5px 0; /* Espaçamento uniforme ao redor do número de vendidos */
+}
+.butao{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1%;
+} 
+#loadMoreBtn{
+    width: 20%;
+    padding: 1%;
+    margin: 1% 0% 4% 0%;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px ;
+    background-color: rgb(74, 74, 221);
+    color: white;
+    cursor: pointer;
+}
+.banner-fila{
+    display: flex;
+    margin: 3%;
+}
+#fila1m,#fila2m,#fila3m{
+    display: none;
+}
+.banner-fila a {
+    width: 100%;
+    color: #000000;
+    padding: 1%;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.banner-fila a p{
+    margin-left: 4%;
+    font-size: 2vh;
+}
+.banner-fila img{
+    display: flex;
+    width: 100%;
+}
+/* Estilos para o pop-up personalizado */
+.popup-categorias-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+}
+.popup-categorias-box {
+    background-color: #ffffff;
+    padding: 5%;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh; /* Limitar altura para permitir scroll interno */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    overflow-y: auto; /* Adicionar rolagem vertical quando necessário */
+    font-weight: 500;
+}
+.popup-categorias-box .popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+.popup-close-button {
+    font-size: 3vh;
+}
+.popup-categorias-box .popup-close-button:hover {
+    color: #ff0000;
+}
+.popup-categorias-box h2 {
+    margin: 0;
+    font-size: 1.8vh;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* Estilo uniforme para opções de categoria */
+.popup-category-item {
+    display: block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    margin-top: 5%;
+    font-size: 1.9vh;
+    color: #0e5aaa;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+.popup-category-item:hover{
+    border: 1px solid #77b7f8;
+    transition: 0.3s
+}
+
+/* Estilo uniforme para o botão "Ver todos os produtos" */
+.ver-todos-produtos {
+    display: block;
+    margin: auto;
+    padding: 12px 20px;
+    background-color: #70acec;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.75vh;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+.ver-todos-produtos:hover {
+    background-color: #0056b3;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.meu-popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: auto; /* Permite rolagem vertical no wrapper */
+    padding: 20px; /* Adiciona um padding para que o conteúdo não fique colado nas bordas */
+}
+.meu-popup-content {
+    position: relative;
+    text-align: center;
+    background-color: transparent; /* Remove a cor de fundo para mostrar a imagem */
+    width: 100%;
+    max-width: 1000px; /* Limita a largura máxima */
+    max-height: 100%; /* Garante que o conteúdo se ajuste à tela */
+    overflow: hidden; /* Garante que a imagem não ultrapasse o limite do popup */
+    border-radius: 8px;
+}
+.meu-popup-content img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço do popup */
+    border-radius: 8px;
+}
+.meu-popup-buttons {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    text-align: center;
+}
+.meu-popup-button {
+    display: block;
+    padding: 5px 15px;
+    margin: 10px 0; /* Margem vertical para espaçamento entre os botões */
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid #000000;
+}
+/* pop up confirmaçao sair da pagina */
+.popup {
+    font-weight: 600;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Garante que o pop-up esteja acima de todos os outros elementos */
+    text-align: center; /* Centraliza conteúdo */
+    width: 50%; /* Largura do pop-up */
+    font-size: 2vh;
+}
+.popup-content {
+    padding: 5%;
+}
+.button-container {
+    margin-top: 4%; /* Espaçamento entre o texto e os botões */
+}
+.yes-button, .no-button {
+    width: 40%; /* Largura dos botões */
+    margin: 0 10px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    font-size: 2.5VH;
+    border-radius: 5px;
+}
+.yes-button {
+    background-color: #4CAF50; /* Cor de fundo para o botão "Sim" */
+    color: white;
+}
+.no-button {
+    background-color: #f44336; /* Cor de fundo para o botão "Não" */
+    color: white;
+}
+/* Estilo para os botões do alerta de cookies */
+
+.cookie-alert {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1%;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    align-items: end;
+}
+.cookie-alert button {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(74, 74, 221);
+    color: #fff;
+    width: auto;
+}
+.cookie-alert a.privacy-link {
+    color: #EA6900;
+    text-decoration: underline;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.cookie-text {
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*A partir dessa linha encerra a página inicial;*/
+/*inicio da seçao de rodapé*/
+.final{
+    background-color: #EA6900;
+}
+.rodape {
+    font-weight: 600;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    border-top: 2px solid  #eaa000;
+}
+.rodape p {
+    margin: 0;
+    color: white;
+    text-align: start;
+}
+.lista-um, .lista-dois {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+.lista-dois p {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.link-lista{
+    text-decoration: none;
+    color: white;
+}
+.link-lista:hover{
+    text-decoration: underline;
+}
+.fim-da-linha{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.linha {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: none;
+    width: auto;
+    color: white;
+    font-size: 1vh; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: 600;
+    padding-bottom: 0.5%;
+}
+.linha::after {
+    content: "Buscapreço© 2023. Todos os direitos reservados.";
+}
+/*fim da seçao de rodapé*/
+/*A partir dessa linha os textos referem-se a pagina de sobre nós*/
+.main-content {
+    padding: 20px;
+}
+.main-content section {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: justify;
+}
+.section-content-container {
+    padding: 20px;
+    width: 50%;
+}
+.section-title {
+    font-size: 1.7vh;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.section-content {
+    font-size: 1.4vh;
+    line-height: 1.6;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+/* Aqui encerra a pagina sobre nós*/
+ /* aqui inicia a responsividade e definiçoes da pagina*/
+.tudo {
+    background-color: whitesmoke;
+}
+@media (min-width: 2800px) {
+    .head {
+        min-height: 15rem;
+        min-width: 300px;            
+    }
+}
+@media (max-width: 1000px) {
+    .banner-fila{
+        flex-direction: column;
+    }
+    .box a {
+        font-size: 1.5vh;
+    }
+    .slider {
+        padding-top: 0;
+    }
+    section.slider {
+        width: 100%;
+        background-size: cover;
+        border-radius: 0%;
+        top: 0;
+    }
+    .slide-box a img {
+        display: none;
+    }
+    .slide-box a img.img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    #categorias-container {
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: min-content; /* Altura dinâmica para as linhas do grid */
+        height: auto; /* Ajusta a altura do contêiner conforme o conteúdo */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+    .categorias.exibidas, .mostrar-menos-link {
+        height: auto; /* Ajusta a altura do contêiner conforme o conteúdo */
+    }
+    .banner-produtos {
+        grid-template-columns: repeat(2, 50%); /* Uma coluna para dispositivos móveis */
+    }
+    .buttons {
+        font-size:1vh;
+    }
+    .meu-popup-content {
+        width: 800px; /* Ajuste para ocupar 90% da largura da tela */
+        height: 1400px; /* Ajuste para ocupar 90% da altura da tela */
+        overflow: auto;
+    }
+    .meu-popup-content::-webkit-scrollbar {
+        width: 0; /* Esconde a scrollbar horizontal */
+        height: 0; /* Esconde a scrollbar vertical */
+    }
+    .meu-popup-buttons {
+        top: 80%;
+        bottom: 0;
+        width: auto;
+        font-size: 3vh;
+        text-wrap: nowrap;
+        transform: translateX(-50%); /* Ajuste para centralizar os botões horizontalmente */
+    }
+    #searchBtn,#searchInput{
+        font-size: 1.4vh;
+    }
+    #searchInput{
+        padding: 3%;
+    }
+    .product-links {
+        grid-template-columns: repeat(2, 1fr); /* Define duas colunas de igual largura */
+        grid-template-rows: auto;
+        gap: 10px; /* Espaço entre os itens */
+    }
+    .product-container {
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        text-align: center;
+        height: 100%;
+    }
+    .product-image {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        min-height: 40%;
+        max-height: 90%;
+        display: block; /* Remove espaço abaixo da imagem */
+        margin-bottom: 30px; /* Remove margens para evitar espaço extra */
+    }
+    .product-info {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .intra-titulo {
+        font-size: 1.7vh;
+    }
+    .vendidos {
+        font-size: 1.4vh;
+        margin: 5px 0 10px 0; /* Ajuste a margem vertical */
+    }
+    .cookie-alert {
+        padding: 2%;  
+        font-size: 1.8vh;
+        align-items: center;
+    }
+    .cookie-alert button {
+        font-size: 1.8vh;
+    }
+    #cookieAlert{
+       
+        width: 90%;
+    }
+    .rodape{
+        flex-direction: column;
+        height: auto;
+        font-size: 1.4vh;
+    }
+    .lista-dois p {
+        justify-content: start;
+    }
+    .linha::after {
+        content: "";
+        display: block;
+        background-image: url(../images/loguinho.webp); /* Caminho para a imagem */
+        background-size: contain; /* Garante que a imagem se ajuste ao espaço disponível */
+        background-repeat: no-repeat; /* Evita a repetição da imagem */
+        width: 60px; /* Largura da imagem */
+        height: 60px; /* Altura da imagem */
+        margin-top: 5px; /* Espaçamento superior */
+    }
+    .melhores {
+        font-size: 1.3vh;
+        padding: 1%;
+    }
+    .yes-button, .no-button {
+        width: 40%; /* Largura dos botões */ 
+        border-radius: 10px;  
+    }
+    .popup {
+        width: 80%;
+    }
+}
+@media (min-width: 1001px) {
+    .product-links {
+        grid-template-columns: repeat(5, 19%); /* Define colunas com largura relativa de 25% */
+        gap: 15px; /* Espaço entre as células do grid */
+        justify-content: center; /* Centraliza o grid no contêiner pai */    
+    }
+    .product-container{
+        min-height: 380px;
+    }
+    #cookieAlert{
+        width: 70%;
+    }
+    .linha {
+        font-size: 1.7vh;
+    }
+    .vendidos {
+        font-size: 1.7vh;
+    }
+}
+@media (max-width: 720px) {        
+    .logo a {
+        background-image: url(../images/Logo_mobile.webp);
+        width: 100px;
+        height: 85px;    
+    }
+    .product-container{
+        min-height: 400px;
+    }
+}   
+@media (max-width: 428px) {
+
+    .link-banner{
+        display: none;
+    }    
+    .show {
+        flex-direction: column;
+    }
+    .showing {
+        width: 90%;
+    }
+    .banner-produtos {
+        grid-template-columns: repeat(2, 1fr); /* Uma coluna para dispositivos móveis */
+        padding: 3%; /* Aumenta o padding para melhor espaçamento */
+        gap: 0.8%; /* Aumenta o espaço entre os itens */
+    }
+    .rodape p, .lista, .lista a, .lista button, .lista input {
+        font-size: 1vh;
+    }
+    .titulo {
+        font-size: 1vh;
+    }
+    .banner-grande {
+        width: 100%;
+        margin-bottom: 2%;            
+    } 
+    .categorias {
+        height: auto;
+        max-width: 100%;
+    }
+    .search-container {
+        margin-bottom: 3%;
+    }
+    #searchInput {
+        width: 85%;
+        padding: 3%;
+    }
+    #searchBtn {
+        width: 15%;
+    }
+    #loadMoreBtn{
+        width: 40%;
+    }
+    .suggestions-container {
+        width: 100%; /* Ajusta a largura para preencher a tela */
+        padding: 2px; /* Reduz o padding para se ajustar melhor em telas menores */
+    }
+    .suggestion-item {
+        flex: 1 1 48%; /* Ajusta a largura dos itens para caber dois itens por linha */
+        min-width: 80px; /* Ajusta o tamanho mínimo dos itens para se adaptar melhor em telas menores */
+    }
+    .item-name {
+        font-size: 1vh; /* Reduz o tamanho da fonte para telas menores */
+    }
+}
+@media (min-width: 1400px) {
+    .tudo {
+        width: 100%;
+        border-radius: 10px;
+        padding: 1%;
+    }
+    .head {
+        min-height: 10rem;
+        min-width: 300px;  
+    }
+    .banner {
+        width: 65%; 
+    }
+    .cookie-alert {
+        justify-content: space-between;
+    }
+    .buttons {
+        flex-direction: row;
+        gap: 10px;
+        width: auto;
+    }
+    .cookie-text {
+        margin-bottom: 0;
+    }
+    .cookie-alert button {
+        width: auto;
+    }
+}
+@media (min-width: 2000px) {
+    #searchInput {
+        padding: 1%;
+        font-size: 1.5vh;
+    }
+    #searchBtn {
+        font-size: 1.6vh;
+    }
+    .tudo {
+        width: 80%;
+        margin: 2% 10% 2% 10%;
+    }      
+    .product-links {
+        grid-template-columns: repeat(4, 1fr); /* Colunas com largura igual */
+        grid-auto-rows: 300px; /* Altura fixa para as linhas do grid */
+        justify-content: center; /* Centraliza o grid no contêiner pai */
+    }
+    .product-container {
+        flex-direction: row; /* Mantém a direção do flex container como linha */
+        text-align: left;
+        box-sizing: border-box; /* Inclui padding e border na largura */
+        height: 100%; /* Garante que o contêiner ocupe a altura total da linha do grid */
+        max-width: 100%; /* Garante que o contêiner ocupe a largura total da coluna */
+        min-height: auto;
+        justify-content: space-evenly;
+    }
+    .product-info {
+        flex-grow: 1; /* Permite que o .product-info ocupe o espaço restante */
+        text-align: justify;
+        padding: 10px; /* Ajuste conforme necessário */
+        box-sizing: border-box; /* Inclui padding e border na largura */
+        font-size: 1vh; /* Define o tamanho da fonte relativo ao contêiner */
+        max-width: 50%;
+    }
+    .product-image {
+        max-width: 50%; /* Ajusta a largura para ocupar o espaço disponível */
+        height: auto; /* Ajusta a altura para ocupar o espaço disponível */
+        object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorção */
+        margin-right: 10px; /* Espaço entre a imagem e as informações */
+        flex-shrink: 0; /* Garante que a imagem não encolha além do tamanho definido */
+        padding-top: 0px;
+    }
+    .intra-titulo {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; /* Número máximo de linhas a serem exibidas */
+        line-clamp: 4; /* Propriedade padrão para compatibilidade futura */
+        max-width: 100%;
+    }
+    #cookieAlert{
+        width: 50%;
+    }
+    
+}
+@media (max-width: 1240px) {
+    .main-content section {
+        flex-direction: column-reverse;
+    }
+    .section-content-container {
+        width: 100%;
+        font-size: 1vh;
+    }
+    .image-container {
+        width: 60%;
+        align-self: center;
+        order: 2;
+    }
+    .section-content-container {
+        order: 1;
+    }
+    .product-container{
+        min-height: 380px;
+    }
+}
+@media (min-width: 2700px) {
+    .product-links a img {
+        width: 20%; 
+    }
+}
+@media (max-width: 520px) {
+    #loadMoreBtn {
+        font-size: 1vh;
+    }
+    .popup {
+        width: 90%;
+    }
+    .yes-button, .no-button {
+        width: 45%;
+        font-size:1vh;
+    }
+    .popup-content {
+        padding: 10px;
+    }
+}
+@media (max-width: 520px) {
+    .melhores {
+        font-size: 1vh;
+        padding: 4%;
+    }
+    .product-links {
+        display: flex;
+        flex-direction: column; /* Alinha os itens em coluna */
+        gap: 10px; /* Espaço entre os itens */
+    }
+    .product-container {
+        width: 100%; /* Garante que o item ocupe toda a largura disponível */
+        min-height: auto;
+        justify-content: center; /* Alinha o conteúdo no início */
+    }
+    .product-image {
+        max-width: 100%; /* Ajusta a largura da imagem para o contêiner */
+        padding-top: 0;
+        margin-bottom: 0; /* Remove margens para evitar espaço extra */
+    }
+    .product-info {
+        width: 100%; /* Garante que ocupa toda a largura disponível */
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 0; /* Remove o padding para melhor ajuste */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinha o conteúdo no início */
+    }
+    .banner-produtos {
+        grid-template-columns: repeat(1, 100%); /* Uma coluna para dispositivos móveis */
+    }
+    .buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-content {
+        padding: 0;
+    }
+    .main-content section {
+        padding: 0;
+        text-align: start;
+    }
+    .section-content-container {
+        width: 100%;
+    }
+    .section-title {
+        font-size: 1.6vh;
+    }
+    .section-content {
+        font-size: 1.4vh;
+    }
+    .image-container img {
+        display: none;
+    }
+    .box a p {
+        display: none;
+    }
+    .box a {
+        padding: 2%;
+    }
+}
+@media (max-width: 190px) {
+    .meu-popup-content {
+        width: 170px; /* Largura menor para telas pequenas */
+        height: 140px; /* Altura menor para telas pequenas */
+    }
+    .meu-popup-content img {
+        width: 100%;
+        height: 100%;
+    }
+    .meu-popup-buttons {
+        top: 58.5%; /* Ajuste a posição dos botões para telas pequenas */
+        font-size: 1vh;
+        text-wrap: wrap;
+        width: 75%;
+    }
+    .meu-popup-button {
+        padding: 1px 2px; /* Reduza o padding dos botões */
+        height: 20px;
+        align-content: center;
+    }
+    .search-container{
+        width: 95%;
+    }
+    #searchInput,#searchBtn{
+        padding: 2%;
+        font-size: 1vh;
+    }
+    .banner-produtos {
+        grid-template-columns: repeat(2, 50%); /* Uma coluna para dispositivos móveis */
+    }
+    .categorias {
+        font-size: 1vh;
+    }
+    #categorias-container{
+        grid-template-columns: repeat(1, 100%);
+        grid-auto-rows: min-content; /* Altura dinâmica para as linhas do grid */
+    }
+    .categorias.exibidas, .mostrar-menos-link {
+        font-size: 1vh;
+    }
+    .categorias img {
+        margin-top:  0;
+        margin-bottom:  0 ;
+    }
+    .cookie-alert {
+        font-size: 1vh; 
+        width: 100%;
+    }
+    .buttons {
+        width: 100%;
+        flex-direction: row;
+    }
+    .cookie-text {
+        margin-bottom: 0;
+    }
+    .cookie-alert button {
+        font-size:1vh;
+        margin: 0 auto;
+    }
+    .product-info {
+        font-size: 1vh;
+    }
+    .box a {
+        padding: 4%;
+    }
+    .buscados h1, .Classe h1{
+        font-size: 1vh;
+    }
+    .logo{
+        margin-bottom: 5%;
+    }
+    .showimports, .shownationals, .showing{
+        font-size: 1vh;
+        width: 100%;
+        height: 20px;
+    }
+}
