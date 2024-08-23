@@ -1029,6 +1029,9 @@ section.slider {
     .cookie-alert button {
         width: auto;
     }
+    .vendidos {
+        font-size: 1.6vh
+    }
 }
 @media (min-width: 2000px) {
     #searchInput {
