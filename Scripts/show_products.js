@@ -70,7 +70,7 @@ function createProductElement(row) {
     const nationalityIcon = document.createElement('i');
     nationalityIcon.classList.add('fa-solid');
     nationalityIcon.style.position = 'absolute';
-    nationalityIcon.style.top = '15px';
+    nationalityIcon.style.top = '5px';
     nationalityIcon.style.right = '5px';
     nationalityIcon.style.fontSize = '1.1em';
     nationalityIcon.style.padding = '2%';
