@@ -749,12 +749,12 @@ section.slider {
     width: 50%;
 }
 .section-title {
-    font-size: 1.7vh;
+    font-size: 2.5vh;
     margin-bottom: 10px;
     text-align: center;
 }
 .section-content {
-    font-size: 1.4vh;
+    font-size: 2.1vh;
     line-height: 1.6;
 }
 .image-container img {
@@ -935,9 +935,6 @@ section.slider {
     }
     .vendidos {
         font-size: 1.5vh;
-    }
-    .main-content {
-        font-size: 2vh
     }
 }
 @media (max-width: 720px) {        
