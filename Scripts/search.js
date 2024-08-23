@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', () => {
         const query = searchInput.value.trim();
         if (query) {
-            window.location.href = `resultados.html?search=${encodeURIComponent(query)}`;
+            window.location.href = `../html/resultados.html?search=${encodeURIComponent(query)}`;
         }
     });
 
