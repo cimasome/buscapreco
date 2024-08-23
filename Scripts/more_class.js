@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 numeroDeClasses = 5;
             }
 
-            currentClasses = classes.slice(0, numeroDeClasses);
-
+            const shuffledClasses = classes.sort(() => Math.random() - 0.5);
+            currentClasses = shuffledClasses.slice(0, numeroDeClasses);
+            
             // Adicionar as classes ao banner-produtos
             currentClasses.forEach(classe => {
                 const novoLink = document.createElement('a');
