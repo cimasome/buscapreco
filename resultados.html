@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="directory of sales">
+    <meta name="keywords" content="saless, ofertas, produtos, descontos, promoções, promoção"> 
+    <link rel="stylesheet" href="assets/css/CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+    <link rel="icon" href="assets/images/Favicon.webp" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title> Buscapreço </title> 
+
+</head>
+
+<body>
+
+    <header class="cabeça">
+        <div class="melhores">
+            AS MELHORES OFERTAS ESTÃO AQUI
+        </div>
+    
+    <section class="head">
+        <div class="logo">
+            <a href="index.html" title="Página Inicial"></a>  
+        </div>
+    </section>
+
+    <div class="search-box">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Contêiner para sugestões -->
+        <div id="suggestions" class="suggestions-container"></div>
+    </div>
+   
+    <nav class="box">
+        <a href="index.html" style="border-left: none;" title="Página inicial"><i class="fa-solid fa-house"></i><p>Início</p></a>
+        <a href="results.html?classe=Nacional"><i class="fa-solid fa-location-dot"></i><p>Nacionais</p></a>
+        <a href="results.html?classe=Importado" style="border-right: none;"><i class="fa-solid fa-earth-americas"></i><p>Importados</p></a>       
+        <a href="infos.html"><i class="fa-solid fa-circle-info"></i><p>Sobre nós</p></a>     
+    </nav>
+    </header>
+
+<div class="tudo">
+
+        <div class="grid-home"> 
+          
+            <div class="show">
+                <section class="Classe">
+                    <h1 id="class-name-link"></h1>
+                </section>
+            </div>
+            <div class="product-links" id="products"></div>
+        </div>
+
+
+
+</div>
+
+<footer class="final">
+    <div class="rodape">
+        <nav class="lista-um">
+        <p><i class="fa-solid fa-clock" style="margin-right: 5px"></i>Horário de Atendimento: segunda-feira à sábado, das 10h às 18h </p>
+        <p><i class="fa-solid fa-envelope" style="margin-right: 5px"></i>buscaprecoficial@outlook.com</p>
+        <p><i class="fa-brands fa-instagram" style="margin-right: 5px"></i>buscapreco.oficial</p>
+        </nav>
+        <nav class="lista-dois">
+            <p><a class="link-lista" href="cookies.html" title="Políticas de privacidade">Políticas de privacidade</a></p>
+            <p><a class="link-lista" href="infos.html#compra" title="Compra segura">Instruções de compra</a></p>
+            <p><a class="link-lista" href="infos.html#rastreio" title="Acompanhar meu pedido">Acompanhar meu pedido</a></p>
+            <p><a class="link-lista" href="infos.html#contato" title="Entrar em contato">Entrar em contato</a></p>
+        </nav>
+    </div>
+    <div class="fim-da-linha">
+        <div class="linha"></div>
+    </div>
+</footer>   
+     
+    <div id="cookieAlert" class="cookie-alert">
+        Este site utiliza cookies para garantir a melhor experiência do usuário. Ao continuar navegando, você concorda com o uso de cookies.
+       <div class="buttons">
+           <button onclick="aceitarCookies()">Aceitar</button>
+           <button onclick="rejeitarCookies()">Rejeitar</button>
+       </div>
+   
+    <!--Scripts -->
+        <script type="text/javascript" src="Scripts/searchresult.js"></script> <!--resultados-->
+        <script type="text/javascript" src="Scripts/search.js"></script> <!--resultados-->
+
+    <!--Scripts -->
+    
+</body>
+</html>
