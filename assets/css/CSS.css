@@ -936,6 +936,9 @@ section.slider {
     .vendidos {
         font-size: 1.5vh;
     }
+    .main-content {
+        font-size: 2vh
+    }
 }
 @media (max-width: 720px) {        
     .logo a {
