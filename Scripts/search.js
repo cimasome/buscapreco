@@ -28,10 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProducts(); // Carregar produtos ao carregar a página
 
     searchBtn.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        if (query) {
-            window.location.href = `../html/resultados.html?search=${encodeURIComponent(query)}`;
+    let query = searchInput.value.trim();
+    
+    if (query) {
+        let url = `../html/resultados.html?search=${encodeURIComponent(query)}`;
+        
+        // Verifica se a URL contém o domínio específico e remove "../" se presente
+        if (window.location.href.startsWith('https://cimasome.github.io/buscapreco/') && url.startsWith('../')) {
+            url = url.replace(/^\.\.\//, '');
         }
+        
+        window.location.href = url;
+    }
     });
 
     searchInput.addEventListener('keypress', (e) => {
