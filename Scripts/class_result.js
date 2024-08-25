@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('class-name-link').textContent = displayText;
 
         // Fazer a requisição para obter os dados do JSON
-        fetch('https://raw.githubusercontent.com/cimasome/Products/main/Todos%20os%20produtos.json')
+        fetch('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json')
             .then(response => response.json())
             .then(data => {
                 // Filtrar os produtos pela classe e categoria escolhida
