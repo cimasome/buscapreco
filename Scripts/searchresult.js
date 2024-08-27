@@ -49,8 +49,11 @@ function displayProducts(productsData, container) {
 function createProductElement(row) {
     const productLink = document.createElement('a');
     productLink.classList.add('produto');
-    productLink.href = row['Link'] ? row['Link'].replace(/\\\//g, '/') : '#'; // Corrigir o formato do link
-    productLink.target = '_blank'; // Abrir em nova guia
+    productLink.href = '#'; // Não define o link diretamente aqui
+    productLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        showPopup(row['Link']);
+    });
 
     const productContainer = document.createElement('div');
     productContainer.classList.add('product-container');
@@ -124,6 +127,44 @@ function createProductElement(row) {
 
     return productLink;
 }
+
+function showPopup(link) {
+    // Verifica se já existe um pop-up ativo
+    if (document.querySelector('.popup')) {
+        return; // Se já existir, não cria um novo
+    }
+
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content');
+
+    const message = document.createElement('p');
+    message.textContent = 'Você será redirecionado à página do produto. Deseja continuar?';
+
+    const yesButton = document.createElement('button');
+    yesButton.textContent = 'Sim';
+    yesButton.classList.add('yes-button');
+    yesButton.addEventListener('click', function() {
+        window.open(link, '_blank'); // Abre o link em uma nova guia
+        document.body.removeChild(popup); // Remove o pop-up
+    });
+
+    const noButton = document.createElement('button');
+    noButton.textContent = 'Não';
+    noButton.classList.add('no-button');
+    noButton.addEventListener('click', function() {
+        document.body.removeChild(popup); // Remove o pop-up se o usuário clicar em 'Não'
+    });
+
+    popupContent.appendChild(message);
+    popupContent.appendChild(yesButton);
+    popupContent.appendChild(noButton);
+    popup.appendChild(popupContent);
+    document.body.appendChild(popup);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('searchBtn');
     const searchInput = document.getElementById('searchInput');
