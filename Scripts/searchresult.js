@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const resultsContainer = document.getElementById('products'); // Atualizado para o novo ID
-    const classNameLink = document.getElementById('class-name-link'); // Novo ID para exibir o termo de pesquisa
+    const resultsContainer = document.getElementById('products');
+    const classNameLink = document.getElementById('class-name-link');
     const query = new URLSearchParams(window.location.search).get('search');
+    const loadMoreBtn = document.getElementById('loadMoreBtn'); // Seleciona o botão "Carregar mais produtos"
+    let displayedCount = 20; // Inicialmente exibe 20 produtos
+    let products = []; // Armazena os produtos carregados
 
     if (query) {
         // Exibir o termo de pesquisa no elemento class-name-link
@@ -10,14 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('https://raw.githubusercontent.com/cimasome/buscapreco/main/pdcts/Todos%20os%20produtos.json')
             .then(response => response.json())
             .then(data => {
+                products = data;
+
                 // Configurar o Fuse.js para busca aproximada
                 const options = {
                     keys: [
-                        { name: 'Categoria', weight: 0.5 }, // Prioridade maior para Categoria
+                        { name: 'Categoria', weight: 0.5 },
                         { name: 'Nome', weight: 0.3 },
-                        { name: 'Classe', weight: 0.2 }
+                        { name: 'Classe', weight: 0.2 },
+                        { 
+                            name: 'Tags', 
+                            weight: 0.2,
+                            getFn: (product) => product.Tags ? product.Tags.split(',').map(tag => tag.trim()) : [] 
+                        }
                     ],
-                    threshold: 0.3 // O valor pode ser ajustado para a sensibilidade da busca
+                    threshold: 0.3
                 };
                 const fuse = new Fuse(data, options);
 
@@ -25,8 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const results = fuse.search(query);
                 const filteredProducts = results.map(result => result.item);
 
-                // Exibir os produtos filtrados
-                displayProducts(filteredProducts, resultsContainer);
+                // Exibir os produtos filtrados com limite inicial
+                displayProducts(filteredProducts, resultsContainer, displayedCount);
+
+                // Adicionar evento ao botão "Carregar mais produtos"
+                loadMoreBtn.addEventListener('click', function() {
+                    displayedCount += 20; // Incrementa o contador em 20
+                    displayProducts(filteredProducts, resultsContainer, displayedCount); // Renderiza mais produtos com base no novo limite
+                });
             })
             .catch(error => {
                 console.error('Erro ao carregar os produtos:', error);
@@ -37,13 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function displayProducts(productsData, container) {
+function displayProducts(productsData, container, limit) {
     container.innerHTML = ''; // Limpar conteúdo anterior
 
-    productsData.forEach(row => {
+    // Mostrar produtos até o limite especificado
+    productsData.slice(0, limit).forEach(row => {
         const productElement = createProductElement(row);
         container.appendChild(productElement);
     });
+
+    // Verificar se ainda há mais produtos para carregar
+    if (limit < productsData.length) {
+        loadMoreBtn.style.display = 'block'; // Mostra o botão se houver mais produtos
+    } else {
+        loadMoreBtn.style.display = 'none'; // Esconde o botão se não houver mais produtos
+    }
 }
 
 function createProductElement(row) {
@@ -54,7 +78,7 @@ function createProductElement(row) {
         event.preventDefault(); // Impede o comportamento padrão do link
         showPopup(row['Link']);
     });
-
+    
     const productContainer = document.createElement('div');
     productContainer.classList.add('product-container');
     productContainer.style.position = 'relative'; // Garantir que o ícone seja posicionado corretamente
