@@ -44,26 +44,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const query = searchInput.value.trim().toLowerCase();
         if (query) {
             const fuse = new Fuse(products, {
-                keys: ['Nome', 'Categoria', 'Classe'],
+                keys: [
+                    'Nome',
+                    'Categoria',
+                    'Classe',
+                    { 
+                        name: 'Tags', 
+                        getFn: (product) => product.Tags ? product.Tags.split(',').map(tag => tag.trim()) : [] 
+                    }
+                ],
                 threshold: 0.5 // Ajuste o threshold conforme necessário
             });
-
+    
             const results = fuse.search(query).slice(0, 4);
             const productSuggestions = results.map(result => result.item);
-
+    
             // Adicionar sugestões de categorias
             const categorySuggestions = [...categories]
                 .filter(category => category.toLowerCase().includes(query))
                 .slice(0, 4); // Limitar a 4 sugestões de categorias
-
+    
             console.log('Sugestões de produtos:', productSuggestions);
             console.log('Sugestões de categorias:', categorySuggestions);
-
+    
             displaySuggestions(productSuggestions, categorySuggestions);
         } else {
             suggestionsContainer.style.display = 'none'; // Ocultar sugestões se a entrada estiver vazia
         }
     });
+    
     function displaySuggestions(productSuggestions, categorySuggestions) {
         suggestionsContainer.innerHTML = ''; // Limpar conteúdo anterior
     
