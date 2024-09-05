@@ -877,13 +877,12 @@ section.slider {
         font-size: 1.8vh;
     }
     #cookieAlert{
-       
         width: 90%;
     }
     .rodape{
         flex-direction: column;
         height: auto;
-        font-size: 1.4vh;
+        font-size: 1.5vh;
     }
     .lista-dois p {
         justify-content: start;
