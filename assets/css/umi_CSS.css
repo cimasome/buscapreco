@@ -277,7 +277,7 @@ body {
     font-size: 2.5vh;
     width: 100%;
     color: black;
-    margin: 10px 0;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -505,7 +505,7 @@ body {
         max-width: 120px;
     }
     .produto-oferta{
-        font-size: 1.6vh; /* Tamanho da fonte, ajuste conforme necessário */
+        font-size: 1.56vh; /* Tamanho da fonte, ajuste conforme necessário */
     }
     .produto-title {
         font-size: 2.7vh; /* Ajuste o tamanho da fonte conforme necessário */
