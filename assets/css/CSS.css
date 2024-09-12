@@ -561,6 +561,7 @@ section.slider {
     overflow-y: auto; /* Permite rolagem vertical no wrapper */
     padding: 20px; /* Adiciona um padding para que o conteúdo não fique colado nas bordas */
 }
+
 .meu-popup-content {
     position: relative;
     text-align: center;
@@ -570,6 +571,26 @@ section.slider {
     max-height: 100%; /* Garante que o conteúdo se ajuste à tela */
     overflow: hidden; /* Garante que a imagem não ultrapasse o limite do popup */
     border-radius: 8px;
+}
+.meu-popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    z-index: 10000; /* Garante que o botão fique sobre o conteúdo do popup */
+}
+
+.meu-popup-close-button:hover {
+    background-color: darkred; /* Alterar a cor ao passar o mouse */
 }
 .meu-popup-content img {
     width: 100%;
@@ -586,7 +607,7 @@ section.slider {
 }
 .meu-popup-button {
     display: block;
-    padding: 5px 15px;
+    padding: 10px 20px; /* Aumenta o padding para um tamanho maior */
     margin: 10px 0; /* Margem vertical para espaçamento entre os botões */
     background-color: #007bff;
     color: #fff;
@@ -594,6 +615,24 @@ section.slider {
     border-radius: 10px;
     cursor: pointer;
     border: 3px solid #000000;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: gradienteAnimado 3s infinite, flip 3s infinite;
+}
+
+@keyframes flip {
+    0%, 100% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(15deg); /* Inclina para a direita */
+    }
+    25%, 75% {
+        transform: rotateY(-15deg); /* Inclina para a esquerda */
+    }
+}
+.meu-popup-button:hover {
+    background-color: #0056b3; /* Adiciona uma cor diferente quando o mouse está sobre o botão */
 }
 /* pop up confirmaçao sair da pagina */
 .popup {
@@ -818,13 +857,11 @@ section.slider {
         width: 0; /* Esconde a scrollbar horizontal */
         height: 0; /* Esconde a scrollbar vertical */
     }
-    .meu-popup-buttons {
-        top: 80%;
-        bottom: 0;
+    .meu-popup-button, .meu-popup-close-button  {
+        font-size: 2.5vh; /* Aumente o tamanho da fonte conforme necessário */
+        padding: 12px 24px; /* Aumente o preenchimento para botões maiores */
         width: auto;
-        font-size: 3vh;
-        text-wrap: nowrap;
-        transform: translateX(-50%); /* Ajuste para centralizar os botões horizontalmente */
+        height: auto;
     }
     #searchBtn,#searchInput{
         font-size: 1.4vh;
