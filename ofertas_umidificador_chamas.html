@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="directory of sales">
+    <meta name="keywords" content="saless, ofertas, produtos, descontos, promoções, promoção"> 
+    <link rel="stylesheet" href="assets/css/CSS.css">
+    <link rel="stylesheet" href="assets/css/umi_CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+    <link rel="icon" href="assets/images/Favicon.webp" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title> Buscapreço </title> 
+    
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index.html" title="Página inicial">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <div class="logo">
+            <img src="assets/images/logobp.webp" alt="Logo">
+        </div>
+        <a href="#" id="searchToggle" title="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+    </div>
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Contêiner para sugestões -->
+        <div id="suggestions" class="suggestions-container"></div>
+    </div>
+    <script>
+        document.getElementById('searchToggle').addEventListener('click', function() {
+            var searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+    
+<div class="tudo">
+   
+    <section class="produto-anuncio-container">
+
+        <div class="imagem-container">
+            <div class="produto-imagem-principal">
+                <img id="imagem-principal" src="assets/images/umi1.webp" alt="Imagem Principal do Produto">
+                <img id="imagem-principal-mobile" src="assets/images/umi1m.webp" alt="Imagem Principal Mobile" class="imagem-mobile">
+            </div>
+            <h1 class="logo-title"><i class="fa-solid fa-fire-flame-curved" style="color: #ea6900;"></i> Kinscoter</h1>
+            <div class="produto-imagens-secundarias">
+                <img src="assets/images/umi1.webp" alt="Imagem Secundária 1" onclick="trocarImagem(this)">
+                <img src="assets/images/umi2.webp" alt="Imagem Secundária 2" onclick="trocarImagem(this)">
+                <img src="assets/images/umi3.webp" alt="Imagem Secundária 3" onclick="trocarImagem(this)">
+                <img src="assets/images/umi4.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">
+                <img src="assets/images/umi6.webp" alt="Imagem Secundária 6" onclick="trocarImagem(this)">
+                
+            </div>
+            <div class="produto-imagens-mobile">
+                <img src="assets/images/umi1m.webp" alt="Imagem Secundária 1" onclick="trocarImagem(this)">
+                <img src="assets/images/umi2m.webp" alt="Imagem Secundária 2" onclick="trocarImagem(this)">
+                <img src="assets/images/umi3m.webp" alt="Imagem Secundária 3" onclick="trocarImagem(this)">
+                <img src="assets/images/umi4m.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">             
+                <img src="assets/images/umi6m.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">             
+            </div>
+        </div>
+        <h1 class="produto-title">Umidificador e Difusor de Aromas</h1>
+        <p class="produto-oferta">Aproveite agora a oferta especial e transforme seu setup ou ambiente com a beleza desse difusor com LED</p>
+
+        <div class="text-container" onclick="toggleContent()">
+            <span id="showMore">Saiba mais</span><i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
+</div>
+
+</div>
+<section id="hiddenContent" class="hidden">
+    <div class="text-cont">
+        <h1 class="titulo">Transforme Seu Ambiente</h1>
+        <div class="vidtext">
+            <ul class="descricao">
+                <li><strong>Quer transformar seu ambiente em um espaço relaxante e personalizado?</strong>
+                    <p>Seu ambiente precisa de um toque especial para criar uma atmosfera relaxante e personalizada.</p>
+                </li>
+                <li><strong>Como um difusor de aromas avançado pode mudar sua experiência diária?</strong>
+                    <p>Transforme seu espaço com nosso difusor de aromas avançado, que combina iluminação RGB e efeito de chama.</p>
+                </li>
+                <li><strong>Está procurando um difusor com capacidade ideal e longa duração?</strong>
+                    <p>Com 180ml e até 12 horas de funcionamento contínuo, é perfeito para óleos essenciais, fitoterápicos ou apenas água.</p>
+                </li>
+                <li><strong>Quer um difusor fácil de conectar e personalizar?</strong>
+                    <p>Compatível com HUBs USB e carregadores de celular (5V/2A), com iluminação RGB que oferece um efeito de chama colorido.</p>
+                </li>
+            </ul>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=1&mute=1" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <h2 class="subtitulo">Destaques do Produto</h2>
+        <ul class="lista-personalizada"> 
+            <li><strong>Iluminação RGB com Efeito Chama:</strong><br> O aparelho conta com um sistema de iluminação RGB que cria um efeito de chama em várias cores diferentes, proporcionando um ambiente relaxante e acolhedor, trazendo versatilidade para deixar o espaço de acordo com o seu gosto</li>
+            <li><strong>Fácil de Usar:</strong><br> Basta adicionar água e óleos essenciais para iniciar a difusão. Não é obrigatório o uso de óleos essenciais, mas para aromatizar é necessário usá-los.</li>
+            <li><strong>Tecnologia Segura:</strong><br> Certifique-se de usar um adaptador de 5V/2A para evitar danos ao circuito. Pode utilizar em HUB USB ou Carregadores de celular desde que seja com a corrente elétrica determinada</li>
+            <li><strong>Uso Prolongado:</strong><br> Desfrute de até 12 horas de funcionamento contínuo.</li>
+            <li><strong>Cuidados:</strong><br> Mantenha o nível da água abaixo da linha MAX e evite que ela entre no duto de ventilação para preservar a vida útil do produto. Caso a água entre no duto não ligue o aparelho e aguarde 48h até que toda a umidade tenha evacuado.</li>
+        </ul>
+
+        <h2 class="subtitulo">Especificações</h2>
+        <ul class="lista-personalizada">
+            <li><strong>Fonte de Alimentação:</strong><br> Cabo USB (recomendado usar fonte de 5V e 2A)</li>
+            <li><strong>Capacidade do Tanque de Água:</strong><br> 180ml</li>
+            <li><strong>Quantidade de Atomização:</strong><br> 15-20 ml/h</li>
+            <li><strong>Tempo de Uso:</strong><br> 9-12 horas</li>
+        </ul>
+
+        <h2 class="subtitulo">Conteúdo do Pacote</h2>
+        <ul class="lista-personalizada">
+            <li><strong>Difusor x 1</strong></li>
+            <li><strong>Instruções de Uso x 1</strong></li>
+            <li><strong>Cabo USB x 1</strong></li>
+        </ul>       
+    </div>
+</section>
+    <div class="produto-ofertas">
+        <a href="https://s.click.aliexpress.com/e/_Dkpz1ib"  class="oferta-botao"><button class="botao">Comprar <i class="fa-solid fa-cart-shopping"></i></button></a>
+    </div>
+
+    <h1 class="logo-title">Quem comprou também viu:</h1>
+    <div class="btn-cont">
+        <a class="fila" href="https://s.shopee.com.br/8f9Ws5sQDV"><img class="filaimg" src="assets/images/sug1.webp">Umidificador RGB Salt Rock - Pedras artificiais</a>
+        <a class="fila" href="https://s.shopee.com.br/9A5nT0qWCc"><img class="filaimg" src="assets/images/sug2.webp">Kinscoter-Umidificador Vulânico RGB</a>
+        <a class="fila" href="https://s.click.aliexpress.com/e/_DkcMqZV"><img class="filaimg" src="assets/images/sug3.webp">Kinscoter-Umidificador com controle remoto</a>
+        <a class="fila" href="https://s.click.aliexpress.com/e/_DkOuxXl"><img class="filaimg" src="assets/images/sug4.webp">Umidificador-efeito chama mármore</a>
+    </div>
+    
+    
+    <button id="toggleHeader" class="arrow-button">
+        Ver mais produtos<i class="fa fa-chevron-right"></i>
+    </button>
+<footer class="final">
+    <div class="rodape">
+        <nav class="lista-um">
+        <p><i class="fa-solid fa-clock" style="margin-right: 5px"></i>Horário de Atendimento: segunda-feira à sábado, das 10h às 18h </p>
+        <p><i class="fa-solid fa-envelope" style="margin-right: 5px"></i>buscaprecoficial@outlook.com</p>
+        <p><i class="fa-brands fa-instagram" style="margin-right: 5px"></i>buscapreco.oficial</p>
+        </nav>
+        <nav class="lista-dois">
+            <p><a class="link-lista" href="cookies.html" title="Políticas de privacidade">Políticas de privacidade</a></p>
+            <p><a class="link-lista" href="infos.html#compra" title="Compra segura">Instruções de compra</a></p>
+            <p><a class="link-lista" href="infos.html#rastreio" title="Acompanhar meu pedido">Acompanhar meu pedido</a></p>
+            <p><a class="link-lista" href="infos.html#contato" title="Entrar em contato">Entrar em contato</a></p>
+        </nav>
+    </div>
+    <div class="fim-da-linha">
+        <div class="linha"></div>
+    </div>
+</footer>   
+     
+        <script type="text/javascript" src="Scripts/search.js"></script> <!--resultados-->
+        <script type="text/javascript" src="Scripts/slide.js"></script> <!--resultados-->
+        <script type="text/javascript">
+            document.getElementById('toggleHeader').addEventListener('click', function() {
+                var body = document.body;
+                
+                // Adiciona a classe para o efeito de deslizar
+                body.classList.add('slide-up');
+                
+                // Espera a animação terminar antes de redirecionar
+                setTimeout(function() {
+                    window.location.href = 'https://buscapreco.store';
+                }, 500); // 500 ms deve corresponder à duração da animação
+            });
+
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                const principalDesktop = document.getElementById('imagem-principal');
+                const principalMobile = document.getElementById('imagem-principal-mobile');
+                const imagensSecundariasDesktop = document.querySelectorAll('.produto-imagens-secundarias img');
+                const imagensSecundariasMobile = document.querySelectorAll('.produto-imagens-mobile img');
+                let index = 0;
+                let intervalId;
+
+                function trocarImagemSlide() {
+                    principalDesktop.classList.add('saltar'); 
+                    principalMobile.classList.add('saltar'); 
+
+                    setTimeout(() => {
+                        index = (index + 1) % imagensSecundariasDesktop.length;
+
+                        // Verifica se existem imagens secundárias para mobile, caso contrário, usa as do desktop
+                        const desktopSrc = imagensSecundariasDesktop[index]?.src;
+                        const mobileSrc = imagensSecundariasMobile[index]?.src || desktopSrc;
+
+                        // Troca as imagens principais de desktop e mobile
+                        if (desktopSrc) {
+                            principalDesktop.src = desktopSrc;
+                        }
+                        if (mobileSrc) {
+                            principalMobile.src = mobileSrc;
+                        }
+
+                        principalDesktop.classList.remove('saltar'); 
+                        principalMobile.classList.remove('saltar'); 
+
+                        principalDesktop.classList.add('aparecer'); 
+                        principalMobile.classList.add('aparecer'); 
+
+                        setTimeout(() => {
+                            principalDesktop.classList.remove('aparecer'); 
+                            principalMobile.classList.remove('aparecer'); 
+                        }, 500);
+                    }, 500);
+                }
+
+                // Alterna a imagem a cada 3 segundos
+                intervalId = setInterval(trocarImagemSlide, 3000);
+
+                // Função para trocar imagem ao passar o mouse nas imagens secundárias de desktop
+                function hoverImagem(img, isDesktop = true) {
+                    clearInterval(intervalId);
+
+                    if (isDesktop) {
+                        principalDesktop.classList.add('aparecer'); 
+                        principalDesktop.src = img.src; 
+                        setTimeout(() => {
+                            principalDesktop.classList.remove('aparecer'); 
+                        }, 500);
+                    } else {
+                        principalMobile.classList.add('aparecer'); 
+                        principalMobile.src = img.src; 
+                        setTimeout(() => {
+                            principalMobile.classList.remove('aparecer'); 
+                        }, 500);
+                    }
+                }
+
+                imagensSecundariasDesktop.forEach((img) => {
+                    img.addEventListener('mouseover', () => hoverImagem(img, true));
+                    img.addEventListener('mouseout', () => intervalId = setInterval(trocarImagemSlide, 3000));
+                });
+
+                imagensSecundariasMobile.forEach((img) => {
+                    img.addEventListener('mouseover', () => hoverImagem(img, false));
+                    img.addEventListener('mouseout', () => intervalId = setInterval(trocarImagemSlide, 3000));
+                });
+            });
+
+            let isFixed = false;
+
+function checkPosition() {
+    const produtoOfertas = document.querySelector('.produto-ofertas');
+    const hiddenContent = document.getElementById('hiddenContent');
+    const hiddenContentTop = hiddenContent.getBoundingClientRect().top + window.scrollY;
+    const hiddenContentHeight = hiddenContent.classList.contains('show') ? hiddenContent.offsetHeight : 0;
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    // Verifica se o hiddenContent tem a classe 'show' e se o scrollPosition está no final do conteúdo
+    if (hiddenContent.classList.contains('show')) {
+        if (scrollPosition >= hiddenContentTop + hiddenContentHeight && isFixed) {
+            produtoOfertas.style.position = 'static';
+            produtoOfertas.style.bottom = 'auto';
+            isFixed = false;
+        } else if (scrollPosition < hiddenContentTop + hiddenContentHeight && !isFixed) {
+            produtoOfertas.style.position = 'fixed';
+            produtoOfertas.style.bottom = '0';
+            produtoOfertas.style.left = '0';
+            produtoOfertas.style.right = '0';
+            isFixed = true;
+        }
+    } else {
+        // Resetar para a posição inicial se a classe 'show' não estiver presente
+        produtoOfertas.style.position = 'static';
+        produtoOfertas.style.bottom = 'auto';
+        isFixed = false;
+    }
+}
+
+
+// Adicione o listener para scroll
+window.addEventListener('scroll', checkPosition);
+
+// Verifica inicialmente a posição ao carregar a página
+document.addEventListener('DOMContentLoaded', checkPosition);
+
+
+function toggleContent() {
+    var content = document.getElementById("hiddenContent");
+
+    if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        content.classList.add("show");
+        // Rolagem suave para o conteúdo exibido
+        content.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        content.classList.remove("show");
+        content.classList.add("hidden");
+    }
+}
+
+        </script>
+    
+</body>
+</html>
