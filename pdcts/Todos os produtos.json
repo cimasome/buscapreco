@@ -1,49 +1,5 @@
 [
  {
-  "Nome": "Base de resfriamento compatível com PS4\/PS4 Pro\/PS4 Slim,OIVO Controller Charging Dock Station com suporte vertical mais frio, carregador de controle duplo com indicadores de LED e 10 jogos de armazenamento",
-  "Link": "https:\/\/amzn.to\/3Tc5EAm",
-  "Preço": 149.9,
-  "Vendas": 467,
-  "Classe": "Acessórios Gamer",
-  "Categoria": "Base Ventilada ",
-  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
-  "Local": "Nacional",
-  "URL": "https:\/\/m.media-amazon.com\/images\/I\/61rNUlQek7L.__AC_SX300_SY300_QL70_ML2_.jpg"
- },
- {
-  "Nome": "Water Cooler 240mm Gamdias Aura GL240 V2 ARGB",
-  "Link": "https:\/\/amzn.to\/4g3TLXg",
-  "Preço": 376.06,
-  "Vendas": 16,
-  "Classe": "Acessórios Gamer",
-  "Categoria": "Base Ventilada e Cooler",
-  "Tags": "Resfriamento, PC, RGB",
-  "Local": "Nacional",
-  "URL": "https:\/\/m.media-amazon.com\/images\/I\/41nb7vTtFHL.__AC_SX300_SY300_QL70_ML2_.jpg"
- },
- {
-  "Nome": "Suporte TwiHill para PS5 com Estação de Carregamento de Controlador e Estação de Refrigeração para Playstation 5 Console Edição Digital e Versão de Disco (Não disponível para Versão PS5 Slim)",
-  "Link": "https:\/\/amzn.to\/4e593cj",
-  "Preço": 260.99,
-  "Vendas": 79,
-  "Classe": "Acessórios Gamer",
-  "Categoria": "Conexões USB",
-  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
-  "Local": "Nacional",
-  "URL": "https:\/\/m.media-amazon.com\/images\/I\/71ktCSB5LGL.__AC_SX300_SY300_QL70_ML2_.jpg"
- },
- {
-  "Nome": "Adaptador de Teclado e Mouse Para Console Xbox One PS4 Nintendo Switch PS3 Redragon Vulcan - GA-250",
-  "Link": "https:\/\/amzn.to\/3zcjcoN",
-  "Preço": 148,
-  "Vendas": 28,
-  "Classe": "Acessórios Gamer",
-  "Categoria": "Conexões USB",
-  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
-  "Local": "Nacional",
-  "URL": "https:\/\/m.media-amazon.com\/images\/I\/517QRWhIZQL.__AC_SX300_SY300_QL70_ML2_.jpg"
- },
- {
   "Nome": "Philips Lâmpada de sinalização veicular Ultinon Pro3000 LED T10 (W5W), 6.000K branco frio",
   "Link": "https:\/\/amzn.to\/3WIlDXU",
   "Preço": "57,10",
@@ -3407,6 +3363,50 @@
   "Tags": "Bluetooth, Música, qualidade",
   "Local": "Nacional",
   "URL": "https:\/\/m.media-amazon.com\/images\/I\/516HwNOJoUL.__AC_SX300_SY300_QL70_ML2_.jpg"
+ },
+ {
+  "Nome": "Base de resfriamento compatível com PS4\/PS4 Pro\/PS4 Slim,OIVO Controller Charging Dock Station com suporte vertical mais frio, carregador de controle duplo com indicadores de LED e 10 jogos de armazenamento",
+  "Link": "https:\/\/amzn.to\/3Tc5EAm",
+  "Preço": 149.9,
+  "Vendas": 467,
+  "Classe": "Gamer",
+  "Categoria": "Acessórios Gamer",
+  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
+  "Local": "Nacional",
+  "URL": "https:\/\/m.media-amazon.com\/images\/I\/61rNUlQek7L.__AC_SX300_SY300_QL70_ML2_.jpg"
+ },
+ {
+  "Nome": "Water Cooler 240mm Gamdias Aura GL240 V2 ARGB",
+  "Link": "https:\/\/amzn.to\/4g3TLXg",
+  "Preço": 376.06,
+  "Vendas": 16,
+  "Classe": "Gamer",
+  "Categoria": "Acessórios Gamer",
+  "Tags": "Resfriamento, PC, RGB",
+  "Local": "Nacional",
+  "URL": "https:\/\/m.media-amazon.com\/images\/I\/41nb7vTtFHL.__AC_SX300_SY300_QL70_ML2_.jpg"
+ },
+ {
+  "Nome": "Suporte TwiHill para PS5 com Estação de Carregamento de Controlador e Estação de Refrigeração para Playstation 5 Console Edição Digital e Versão de Disco (Não disponível para Versão PS5 Slim)",
+  "Link": "https:\/\/amzn.to\/4e593cj",
+  "Preço": 260.99,
+  "Vendas": 79,
+  "Classe": "Gamer",
+  "Categoria": "Acessórios Gamer",
+  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
+  "Local": "Nacional",
+  "URL": "https:\/\/m.media-amazon.com\/images\/I\/71ktCSB5LGL.__AC_SX300_SY300_QL70_ML2_.jpg"
+ },
+ {
+  "Nome": "Adaptador de Teclado e Mouse Para Console Xbox One PS4 Nintendo Switch PS3 Redragon Vulcan - GA-250",
+  "Link": "https:\/\/amzn.to\/3zcjcoN",
+  "Preço": 148,
+  "Vendas": 28,
+  "Classe": "Gamer",
+  "Categoria": "Acessórios Gamer",
+  "Tags": "Base Ventilada, Cooler, Suporte, PC, Notebook, ",
+  "Local": "Nacional",
+  "URL": "https:\/\/m.media-amazon.com\/images\/I\/517QRWhIZQL.__AC_SX300_SY300_QL70_ML2_.jpg"
  },
  {
   "Nome": "Volante Logitech G29 Driving Force e Pedais com Force Feedback para PS5, PS4, PS3 e PC",
