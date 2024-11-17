@@ -933,7 +933,7 @@ section.slider {
         font-size: 2vh;
     }
     .preco-medio-label {
-        font-size: 1.4vh;
+        font-size: 1.75vh;
     }
     .cookie-alert {
         padding: 2%;  
@@ -943,8 +943,7 @@ section.slider {
     .cookie-alert button {
         font-size: 1.8vh;
     }
-    #cookieAlert{
-       
+    #cookieAlert{   
         width: 90%;
     }
     .rodape{
