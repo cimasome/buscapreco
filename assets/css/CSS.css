@@ -393,26 +393,52 @@ section.slider {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha o conteúdo na parte inferior do contêiner */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    gap: 10px; /* Espaçamento igual entre os itens */
 }
+
 .intra-titulo {
     font-size: 2vh;
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
     font-weight: 500;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Número máximo de linhas a serem exibidas */
+    -webkit-line-clamp: 3; /* Número máximo de linhas exibidas */
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
     line-clamp: 3;
     min-height: 60px; /* Define uma altura mínima para o título */
 }
+
 .vendidos {
     font-size: 1vh;
     font-weight: 500;
-    margin: 5px 0; /* Espaçamento uniforme ao redor do número de vendidos */
+    margin: 0; /* Remover margens adicionais */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto */
+    gap: 5px; /* Espaçamento entre o ícone e o texto */
 }
+
+.preco-medio-container {
+    display: flex;
+    flex-direction: column; /* Exibir os itens em coluna */
+    align-items: flex-start; /* Alinhar ao início do contêiner */
+    gap: 5px; /* Espaçamento entre os elementos internos */
+}
+
+.preco {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 0; /* Remover margens adicionais */
+}
+
+.preco-medio-label {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0; /* Remover margens adicionais */
+}
+
 .butao{
     display: flex;
     justify-content: center;
@@ -880,15 +906,15 @@ section.slider {
         margin: 0;
         text-align: center;
         height: 100%;
+        padding: 8%;
     }
     .product-image {
         width: auto;
         max-width: 100%;
         height: auto;
-        min-height: 40%;
+        min-height: 35%;
         max-height: 90%;
         display: block; /* Remove espaço abaixo da imagem */
-        margin-bottom: 30px; /* Remove margens para evitar espaço extra */
     }
     .product-info {
         width: 100%;
@@ -902,6 +928,12 @@ section.slider {
     .vendidos {
         font-size: 1.3vh;
         margin: 5px 0 10px 0; /* Ajuste a margem vertical */
+    }
+    .preco {
+        font-size: 2vh;
+    }
+    .preco-medio-label {
+        font-size: 1.4vh;
     }
     .cookie-alert {
         padding: 2%;  
@@ -957,10 +989,11 @@ section.slider {
     .product-links {
         grid-template-columns: repeat(5, 19%); /* Define colunas com largura relativa de 25% */
         gap: 15px; /* Espaço entre as células do grid */
+        height: 100%;
         justify-content: center; /* Centraliza o grid no contêiner pai */    
     }
     .product-container{
-        height: 100%;
+        height: 140%;
     }
     #cookieAlert{
         width: 70%;
@@ -970,7 +1003,15 @@ section.slider {
     }
     .vendidos {
         font-size: 1.5vh;
+    }   
+    .preco {
+        font-size: 2vh;
+
     }
+    .preco-medio-label {
+        font-size: 1.4vh;
+    }
+    
 }
 @media (max-width: 720px) {        
     .logo a {
@@ -1114,9 +1155,6 @@ section.slider {
         line-clamp: 4; /* Propriedade padrão para compatibilidade futura */
         max-width: 100%;
     }
-    #cookieAlert{
-        width: 50%;
-    }
     
 }
 @media (max-width: 1240px) {
@@ -1142,6 +1180,21 @@ section.slider {
 @media (min-width: 2700px) {
     .product-links a img {
         width: 20%; 
+    }
+    .vendidos {
+        font-size: 1vh;
+    }   
+    .preco {
+        font-size: 1vh;
+    }
+    .intra-titulo{
+        font-size: 1vh;
+    }
+    .preco-medio-label {
+        font-size: 0.8vh;
+    }
+    #cookieAlert{
+        width: 50%;
     }
 }
 @media (max-width: 520px) {
