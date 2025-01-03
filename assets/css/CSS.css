@@ -315,8 +315,8 @@ section.slider {
 }
 #searchInput::placeholder {
     color: #888;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    opacity: 1; /* Para garantir que a cor do placeholder seja aplicada */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0.7; /* Para garantir que a cor do placeholder seja aplicada */
 }
 #searchBtn {
     font-size: 2.5vh;
@@ -338,6 +338,55 @@ section.slider {
 .link-banner img{
     width: 100%;
 }
+
+/* estilo para submarcas */
+.submarcas {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.submarcas img {
+    width: 95%;
+    border-radius: 10px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    perspective: 800px; /* Aumente a perspectiva para mais profundidade */
+    animation: float 3s ease-in-out infinite; /* Animação de flutuação */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Leve sombra quando o mouse não estiver em cima */
+}
+
+/* Adiciona animação de flutuação */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.submarcas img:hover {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+}
+
+.upset {
+    justify-content: center;
+    display: flex;
+    margin: 1%;
+    flex-direction: column;
+}
+
+.koutwear {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin: 1%;
+}
+
 /* Estilos para o contêiner principal .grid-home */
 .grid-home {
     width: 90%;
@@ -836,6 +885,9 @@ section.slider {
     }
 }
 @media (max-width: 1000px) {
+    .submarcas {
+        flex-direction: column;
+     }
     .banner-fila{
         flex-direction: column;
     }
@@ -933,7 +985,7 @@ section.slider {
         font-size: 2vh;
     }
     .preco-medio-label {
-        font-size: 1.75vh;
+        font-size: 1.4vh;
     }
     .cookie-alert {
         padding: 2%;  
@@ -943,7 +995,8 @@ section.slider {
     .cookie-alert button {
         font-size: 1.8vh;
     }
-    #cookieAlert{   
+    #cookieAlert{
+       
         width: 90%;
     }
     .rodape{

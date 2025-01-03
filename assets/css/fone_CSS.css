@@ -7,7 +7,7 @@ body {
 .logo-title{
     color: black;
     text-align: start;
-    width: 95.1%;
+    width: 94.1%;
     gap: 20%;
     margin: 0 auto;
     font-size: 3vh;
@@ -21,16 +21,7 @@ body {
     border-radius: 10px;
     max-width: 100%;
 }
-.comprou{
-    width: 95%;
-    margin: 2.4%;
-    background-color: #dee0ff;
-    border-radius: 10px;
-    padding: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .produto-title {
     font-size: 4vh; /* Ajuste o tamanho da fonte conforme necessário */
     font-weight: bold;
@@ -198,7 +189,6 @@ body {
     right: 0;
     z-index: 1000;
 }
-
 .oferta-botao {
     background: #90ee90;
     background-size: 400% 400%;
@@ -286,10 +276,10 @@ body {
 .produto-oferta {
     font-size: 2.5vh;
     width: 100%;
+    font-weight: bold;
     color: black;
     margin: 0 auto;
     text-align: center;
-    font-weight: bold;
 }
 
 
@@ -331,13 +321,23 @@ body {
     gap: 1%;
     justify-content: center; /* Alinha os itens ao centro horizontalmente */
 }
+.comprou{
+    width: 95%;
+    margin: 2.4%;
+    background-color: #dee0ff;
+    border-radius: 10px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .arrow-button {
     color: black; /* Cor do texto e ícone */
     font-size: 2vh; /* Tamanho da fonte, ajuste conforme necessário */
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    width: 25%;
+    width: 35%;
     margin-bottom: 2%;
     padding: 2%;
     margin: 0;
@@ -357,17 +357,18 @@ body {
     transition: transform 0.5s ease;
     border-radius: 10px;
     text-decoration: none;
-    margin: 1%;
+
 }
 .fila:hover{
     transform: scale(0.9);
 }
 .filaimg{
     width: 100%;
+    padding: 3%;
 }
 .titulo {
     font-size: 3vh;
-    color:  #5e17eb;
+    color: #5e17eb;
     margin-bottom: 2%;
     text-align: center;
 }
@@ -395,7 +396,7 @@ body {
 .subtitulo {
     font-size: 3vh;
     margin: 20px 0 10px;
-    color:  #5e17eb;
+    color: #5e17eb;
     text-decoration:overline;
 
 }
@@ -406,8 +407,6 @@ body {
 }
 .lista-personalizada li {
     margin-bottom: 30px; /* Mantém espaçamento entre os itens */
-    font-size: 1.9vh;
-
 }
 .video-container {
     width: 50vw; /* Define a largura do container como metade da largura da tela */
@@ -454,7 +453,7 @@ body {
 .search-box {
     display: none;
     position: absolute;
-    top: auto; /* Ajuste conforme necessário */ 
+    top: auto; /* Ajuste conforme necessário */
     left: 0;
     right: 0;
     background-color: #ea6900;
@@ -492,81 +491,72 @@ body {
     font-size: 18px;
 }
 @media (max-width: 1000px){
-
-    .arrow-button {
-        width: 50%;
-    }
     .logo img {
-        max-width: 50%;
-        height: auto;
-}
-.video-container {
-    width: 100%; /* Ocupa toda a largura da tela */
-    max-width: 100vw; /* Garante que a largura não exceda a tela */
-    height: auto; /* Ajusta a altura automaticamente com base na largura */
-    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo (16:9 para vídeos do YouTube) */
-    margin-bottom: 5%;
-}
-.video-container iframe {
-    width: 100%; /* Faz com que o iframe ocupe toda a largura do container */
-    height: 100%; /* Faz com que o iframe ocupe toda a altura do container */
-    border: none; /* Remove a borda padrão do iframe */
-}
-.produto-nome{
-    font-size: 2vh;
-    width: auto;
-}
-.produto-imagens-secundarias img {
-    max-width: 120px;
-}
-.produto-oferta{
-    font-size: 2.5vh; /* Tamanho da fonte, ajuste conforme necessário */
-    font-weight: bold;
-}
-.produto-title {
-    font-size: 2.7vh; /* Ajuste o tamanho da fonte conforme necessário */
-    text-wrap: nowrap;
-}
-.oferta-botao {
-    width: 100%;
-    margin-bottom: 5%;
-}
-.descricao li {
-    margin-bottom: 5%; /* Adiciona espaçamento entre os tópicos */
-    font-size: 3vh;
-}
-
-.descricao p {
-    margin-bottom: 5%;
-    font-size: 2vh;
-    color: #555; /* Cor da descrição */
-}
-.vidtext{
-    flex-direction: column-reverse;
-}
-.descricao {
-    width: 100%;
-}
-.header {
-    font-size: 1.9vh;
-    align-items: start;
-    padding-top: 5%;
-}
-.btn-cont {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
-    grid-template-rows: repeat(2, auto); /* 2 linhas, ajustando a altura automaticamente */
-    padding:1%;
-}
-.produto-ofertas {
-    width: 100%;   
-}
-.oferta-botao {
-    padding: 3%;
-    width: 90%;
-}
-}
-@media (min-width: 1001px) {
-    .header a i{
+            max-width: 50%;
+            height: auto;
+    }
+    .video-container {
+        width: 100%; /* Ocupa toda a largura da tela */
+        max-width: 100vw; /* Garante que a largura não exceda a tela */
+        height: auto; /* Ajusta a altura automaticamente com base na largura */
+        aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo (16:9 para vídeos do YouTube) */
+        margin-bottom: 5%;
+    }
+    .video-container iframe {
+        width: 100%; /* Faz com que o iframe ocupe toda a largura do container */
+        height: 100%; /* Faz com que o iframe ocupe toda a altura do container */
+        border: none; /* Remove a borda padrão do iframe */
+    }
+    .produto-nome{
         font-size: 2vh;
+        width: auto;
+    }
+    .produto-imagens-secundarias img {
+        max-width: 120px;
+    }
+    .produto-oferta{
+        font-size: 2vh; /* Tamanho da fonte, ajuste conforme necessário */
+        font-weight: bold;
+    }
+    .produto-title {
+        font-size: 2.7vh; /* Ajuste o tamanho da fonte conforme necessário */
+        text-wrap: nowrap;
+    }
+    .oferta-botao {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .descricao li {
+        margin-bottom: 5%; /* Adiciona espaçamento entre os tópicos */
+        font-size: 3vh;
+    }
+    
+    .descricao p {
+        margin-bottom: 5%;
+        font-size: 2vh;
+        color: #555; /* Cor da descrição */
+    }
+    .vidtext{
+        flex-direction: column-reverse;
+    }
+    .descricao {
+        width: 100%;
+    }
+    .header {
+        font-size: 1.9vh;
+        align-items: start;
+        padding-top: 5%;
+    }
+    .btn-cont {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
+        grid-template-rows: repeat(2, auto); /* 2 linhas, ajustando a altura automaticamente */
+        padding: 2%;
+    }
+    .produto-ofertas {
+        width: 100%;   
+    }
+    .oferta-botao {
+        padding: 3%;
+        width: 90%;
     }
 }
