@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="directory of sales">
+    <meta name="keywords" content="saless, ofertas, produtos, descontos, promoções, promoção"> 
+    <link rel="stylesheet" href="assets/css/CSS.css">
+    <link rel="stylesheet" href="assets/css/fone_CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+    <link rel="icon" href="assets/images/Favicon.webp" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title> Buscapreço </title> 
+    
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="index.html" title="Página inicial">
+            <i class="fa-solid fa-house" style="color:#5e17eb;"></i>
+        </a>
+        <div class="logo">
+            <img src="assets/images/umi_campaing/uplogo.png" alt="Logo">
+        </div>
+        <a href="#" id="searchToggle" title="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"style="color:#5e17eb;"></i>
+        </a>
+    </div>
+    <div class="search-box" id="searchBox">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Contêiner para sugestões -->
+        <div id="suggestions" class="suggestions-container"></div>
+    </div>
+    <script>
+        document.getElementById('searchToggle').addEventListener('click', function() {
+            var searchBox = document.getElementById('searchBox');
+            searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+    
+<div class="tudo">
+   
+    <section class="produto-anuncio-container">
+
+        <div class="imagem-container">
+            <div class="produto-imagem-principal">
+                <img id="imagem-principal" src="assets/images/fone_campaing/1.webp" alt="Imagem Principal do Produto">
+                <img id="imagem-principal-mobile" src="assets/images/fone_campaing/1tm.webp" alt="Imagem Principal Mobile" class="imagem-mobile">
+            </div>
+
+            <div class="produto-imagens-secundarias">
+                <img src="assets/images/fone_campaing/1.webp" alt="Imagem Secundária 1" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/2.webp" alt="Imagem Secundária 2" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/3.webp" alt="Imagem Secundária 3" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/4.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/5.webp" alt="Imagem Secundária 6" onclick="trocarImagem(this)">
+                
+            </div>
+            <div class="produto-imagens-mobile">
+                <img src="assets/images/fone_campaing/1tm.webp" alt="Imagem Secundária 1" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/2tm.webp" alt="Imagem Secundária 2" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/3tm.webp" alt="Imagem Secundária 3" onclick="trocarImagem(this)">
+                <img src="assets/images/fone_campaing/4tm.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">             
+                <img src="assets/images/fone_campaing/5tm.webp" alt="Imagem Secundária 4" onclick="trocarImagem(this)">             
+            </div>
+        </div>
+        <h1 class="produto-title">Fone com tela Touch - Basike Pro</h1>
+        <p class="produto-oferta">Revolucione a sua experiência de som.</p>
+
+        <h1 class="link-banner" href="https://amzn.to/3PVpzlJ" style="margin-bottom: 5%;"><img id="linkbanner" src="assets/images/fone_campaing/basike.webp"></h1>
+
+
+        <div class="text-container" onclick="toggleContent()">
+            <span id="showMore">Toque para saber mais</span><i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
+</div>
+
+</div>
+<section id="hiddenContent" class="hidden">
+    <div class="text-cont">
+        <h1 class="titulo">Tenha a imersão surround</h1>
+        <div class="vidtext">
+            <ul class="descricao">
+                <li><strong>Experimente a melhor qualidade de som LENOVO</strong>
+                    <p>Você precisa ter a sensação de qualidade do Fone sem fio GM2 Pro da Lenovo</p>
+                </li>
+                <li><strong>Como ele pode revolucionar minha experiência com áudio?</strong>
+                    <p>O fone GM2 Pro permite que o usuário entre em uma ambiente isolado de som graças a sua tecnologia intra auricular</p>
+                </li>
+                <li><strong>Melhor performance com longa duração</strong>
+                    <p>Com até 5 horas de funcionamento contínuo em uso extremo, é perfeito para sessões de jogos ou longo tempo de uso para ouvir músicas</p>
+                </li>
+                <li><strong>Quer um fone fácil de conectar e recheado de funções?</strong>
+                    <p>Compatível com todos os Smartphones e Iphones que possuem Bluetooth. Permite que o usuário conecte-se ao Assistente Virtual do aparelho com um simples toque, além de possuir o modo Gamer que altera o modo de iluminação e reduz o atraso no recebimento de áudio</p>
+                </li>
+            </ul>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=1&mute=1" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        <img src="assets/images/fone_campaing/1.webp" style="display: flex;"> 
+
+            <h2 class="subtitulo">Destaques do Produto</h2>
+            <ul class="lista-personalizada"> 
+                <li><strong>Iluminação em LED</strong><br> O aparelho conta com um sistema de iluminação LED que cria um efeito Gamer proporcionando uma melhor experiência</li>
+                <li><strong>Fácil de Usar:</strong><br> Basta conectar os fones ao Bluetooth do seu Smartphone e está pronto para usufruir da qualidade de som do Lenovo GM2 Pro</li>
+                <li><strong>Tecnologia Segura:</strong><br> Os fones contam com uma tecnologia Bluetooth 5.3 que proporciona maior rapidez e evita atrasos no som</li>
+                <li><strong>Uso Prolongado:</strong><br> Desfrute de até 5 horas de funcionamento contínuo.</li>
+                <li><strong>Cuidados:</strong><br> Mantenha o fone e a caixa de carregamento longe da água e do calor excessivo</li>
+            </ul>
+            <div class="lateral" style="display:flex;">
+                <div style="width: 100%;">
+                    <h2 class="subtitulo">Especificações</h2>
+                    <ul class="lista-personalizada">
+                        <li><strong>Fonte de Alimentação:</strong><br> Cabo USB (recomendado usar fonte de 5V e 2A)</li>
+                        <li><strong>Capacidade do Tanque de Água:</strong><br> 180ml</li>
+                        <li><strong>Quantidade de Atomização:</strong><br> 15-20 ml/h</li>
+                        <li><strong>Tempo de Uso:</strong><br> 9-12 horas</li>
+                    </ul>
+                </div>
+                <img class="bannerbaixo" src="assets/images/fone_campaing/2.webp" style="display: flex;"> 
+            </div>
+            <h2 class="subtitulo">Conteúdo do Pacote</h2>
+            <ul class="lista-personalizada">
+                <li>Par de Fone GM2 Pro x 1</li>
+                <li>Manual de Uso x 1</li>
+                <li>Cabo USB tipo C x 1</li>
+                <li>Acessórios para o fone</li>
+            </ul>
+    </div>
+</section>
+    <div class="produto-ofertas">
+        <a href="https://s.click.aliexpress.com/e/_Dkpz1ib" class="oferta-botao">
+            <button class="botao">Comprar <i class="fa-solid fa-cart-shopping"></i></button>
+        </a>
+    </div>
+
+    <div class="submarcas">
+        <section class="upset">
+            <section class="buscados">
+                <h1 href="google.com" title="Ver produtos mais buscados">
+                    <i class="fa-solid fa-computer"></i> Mais em UP Setup
+                </h1>
+            </section>           
+            <a href="https://buscapreco.store/ofertas_umidificador_chamas.html"><img src="assets/images/desctbanner.webp" alt="Logo" class="interactive-img"></a>
+        </section>
+        <section class="koutwear">
+            <a href="https://buscapreco.store/ofertas_umidificador_chamas.html"><img src="assets/images/descupbanner.webp" alt="Logo" class="interactive-img"></a>
+        </section>
+        <section class="koutwear1">
+            <a href="https://buscapreco.store/ofertas_umidificador_chamas.html"><img src="assets/images/desclenovobanner.webp" alt="Logo" class="interactive-img"></a>
+        </section>
+    </div>
+
+    <div class="comprou">
+        <button id="toggleHeader" class="arrow-button">
+            Ver mais produtos<i class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div id="popup" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 class="logo-title">Veja também:</h1>
+            <div class="btn-cont">
+                <a class="fila" href="https://s.shopee.com.br/8f9Ws5sQDV">
+                    <img class="filaimg" src="assets/images/umi_campaing/sug1.webp">Umidificador RGB Salt Rock - Pedras artificiais
+                </a>
+                <a class="fila" href="https://s.shopee.com.br/9A5nT0qWCc">
+                    <img class="filaimg" src="assets/images/umi_campaing/sug2.webp">Kinscoter-Umidificador Vulânico RGB
+                </a>
+                <a class="fila" href="https://s.click.aliexpress.com/e/_DkcMqZV">
+                    <img class="filaimg" src="assets/images/umi_campaing/sug3.webp">Kinscoter-Umidificador com controle remoto
+                </a>
+                <a class="fila" href="https://s.click.aliexpress.com/e/_DkOuxXl">
+                    <img class="filaimg" src="assets/images/umi_campaing/sug4.webp">Umidificador-efeito chama mármore
+                </a>
+            </div>
+            <div class="btn-row">
+                <a href="https://buscapreco.store" class="action-button">
+                    Ver mais produtos
+                </a>
+                <button id="closeWindow" class="action-button">
+                    Fechar janela
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para mostrar o pop-up
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block'; // Exibir o pop-up
+        }
+
+        // Função para esconder o pop-up
+        function hidePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none'; // Esconder o pop-up
+        }
+
+        // Mostrar o pop-up quando o usuário tenta voltar
+        window.addEventListener('popstate', function(event) {
+            showPopup();
+        });
+
+        // Manipulando o histórico para capturar "Voltar"
+        window.history.pushState(null, document.title, window.location.href);
+
+        // Fechar o pop-up e permitir voltar à página anterior ao clicar no botão "Fechar janela"
+        document.getElementById('closeWindow').addEventListener('click', function() {
+            hidePopup(); // Fechar o pop-up
+            history.back(); // Retornar à página anterior
+        });
+
+        // Fechar o pop-up ao clicar no botão "X"
+        document.querySelector('.close').addEventListener('click', function() {
+            hidePopup(); // Fechar o pop-up
+        });
+    </script>
+
+<footer class="final" style="background-color:#5e17eb">
+    <div class="rodape">
+        <nav class="lista-um">
+        <p><i class="fa-solid fa-clock" style="margin-right: 5px"></i>Horário de Atendimento: segunda-feira à sábado, das 10h às 18h </p>
+        <p><i class="fa-solid fa-envelope" style="margin-right: 5px"></i>buscaprecoficial@outlook.com</p>
+        <p><i class="fa-brands fa-instagram" style="margin-right: 5px"></i>buscapreco.oficial</p>
+        </nav>
+        <nav class="lista-dois">
+            <p><a class="link-lista" href="cookies.html" title="Políticas de privacidade">Políticas de privacidade</a></p>
+            <p><a class="link-lista" href="infos.html#compra" title="Compra segura">Instruções de compra</a></p>
+            <p><a class="link-lista" href="infos.html#rastreio" title="Acompanhar meu pedido">Acompanhar meu pedido</a></p>
+            <p><a class="link-lista" href="infos.html#contato" title="Entrar em contato">Entrar em contato</a></p>
+        </nav>
+    </div>
+    <div class="fim-da-linha">
+        <div class="linha"></div>
+    </div>
+</footer>   
+     
+        <script type="text/javascript" src="Scripts/search.js"></script> <!--resultados-->
+        <script type="text/javascript" src="Scripts/slide.js"></script> <!--resultados-->
+        <script type="text/javascript">
+            document.getElementById('toggleHeader').addEventListener('click', function() {
+                var body = document.body;
+                
+                // Adiciona a classe para o efeito de deslizar
+                body.classList.add('slide-up');
+                
+                // Espera a animação terminar antes de redirecionar
+                setTimeout(function() {
+                    window.location.href = 'https://buscapreco.store';
+                }, 500); // 500 ms deve corresponder à duração da animação
+            });
+
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                const principalDesktop = document.getElementById('imagem-principal');
+                const principalMobile = document.getElementById('imagem-principal-mobile');
+                const imagensSecundariasDesktop = document.querySelectorAll('.produto-imagens-secundarias img');
+                const imagensSecundariasMobile = document.querySelectorAll('.produto-imagens-mobile img');
+                let index = 0;
+                let intervalId;
+
+                function trocarImagemSlide() {
+                    principalDesktop.classList.add('saltar'); 
+                    principalMobile.classList.add('saltar'); 
+
+                    setTimeout(() => {
+                        index = (index + 1) % imagensSecundariasDesktop.length;
+
+                        // Verifica se existem imagens secundárias para mobile, caso contrário, usa as do desktop
+                        const desktopSrc = imagensSecundariasDesktop[index]?.src;
+                        const mobileSrc = imagensSecundariasMobile[index]?.src || desktopSrc;
+
+                        // Troca as imagens principais de desktop e mobile
+                        if (desktopSrc) {
+                            principalDesktop.src = desktopSrc;
+                        }
+                        if (mobileSrc) {
+                            principalMobile.src = mobileSrc;
+                        }
+
+                        principalDesktop.classList.remove('saltar'); 
+                        principalMobile.classList.remove('saltar'); 
+
+                        principalDesktop.classList.add('aparecer'); 
+                        principalMobile.classList.add('aparecer'); 
+
+                        setTimeout(() => {
+                            principalDesktop.classList.remove('aparecer'); 
+                            principalMobile.classList.remove('aparecer'); 
+                        }, 500);
+                    }, 500);
+                }
+
+                // Alterna a imagem a cada 3 segundos
+                intervalId = setInterval(trocarImagemSlide, 3000);
+
+                // Função para trocar imagem ao passar o mouse nas imagens secundárias de desktop
+                function hoverImagem(img, isDesktop = true) {
+                    clearInterval(intervalId);
+
+                    if (isDesktop) {
+                        principalDesktop.classList.add('aparecer'); 
+                        principalDesktop.src = img.src; 
+                        setTimeout(() => {
+                            principalDesktop.classList.remove('aparecer'); 
+                        }, 500);
+                    } else {
+                        principalMobile.classList.add('aparecer'); 
+                        principalMobile.src = img.src; 
+                        setTimeout(() => {
+                            principalMobile.classList.remove('aparecer'); 
+                        }, 500);
+                    }
+                }
+
+                imagensSecundariasDesktop.forEach((img) => {
+                    img.addEventListener('mouseover', () => hoverImagem(img, true));
+                    img.addEventListener('mouseout', () => intervalId = setInterval(trocarImagemSlide, 3000));
+                });
+
+                imagensSecundariasMobile.forEach((img) => {
+                    img.addEventListener('mouseover', () => hoverImagem(img, false));
+                    img.addEventListener('mouseout', () => intervalId = setInterval(trocarImagemSlide, 3000));
+                });
+            });
+
+            let isFixed = false;
+
+function checkPosition() {
+    const produtoOfertas = document.querySelector('.produto-ofertas');
+    const hiddenContent = document.getElementById('hiddenContent');
+    const hiddenContentTop = hiddenContent.getBoundingClientRect().top + window.scrollY;
+    const hiddenContentHeight = hiddenContent.classList.contains('show') ? hiddenContent.offsetHeight : 0;
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    // Verifica se o hiddenContent tem a classe 'show' e se o scrollPosition está no final do conteúdo
+    if (hiddenContent.classList.contains('show')) {
+        if (scrollPosition >= hiddenContentTop + hiddenContentHeight && isFixed) {
+            produtoOfertas.style.position = 'static';
+            produtoOfertas.style.bottom = 'auto';
+            isFixed = false;
+        } else if (scrollPosition < hiddenContentTop + hiddenContentHeight && !isFixed) {
+            produtoOfertas.style.position = 'fixed';
+            produtoOfertas.style.bottom = '0';
+            produtoOfertas.style.left = '0';
+            produtoOfertas.style.right = '0';
+            isFixed = true;
+        }
+    } else {
+        // Resetar para a posição inicial se a classe 'show' não estiver presente
+        produtoOfertas.style.position = 'static';
+        produtoOfertas.style.bottom = 'auto';
+        isFixed = false;
+    }
+}
+
+
+// Adicione o listener para scroll
+window.addEventListener('scroll', checkPosition);
+
+// Verifica inicialmente a posição ao carregar a página
+document.addEventListener('DOMContentLoaded', checkPosition);
+
+
+function toggleContent() {
+    var content = document.getElementById("hiddenContent");
+
+    if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        content.classList.add("show");
+        // Rolagem suave para o conteúdo exibido
+        content.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        content.classList.remove("show");
+        content.classList.add("hidden");
+    }
+}
+        </script>
+    
+</body>
+</html>
