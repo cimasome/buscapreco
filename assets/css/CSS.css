@@ -380,7 +380,7 @@ section.slider {
     flex-direction: column;
 }
 
-.koutwear {
+.koutwear, .koutwear1 {
     justify-content: center;
     flex-direction: column;
     display: flex;
@@ -1036,8 +1036,14 @@ section.slider {
         font-size: 2vh;
         min-height: 140px;
     }
+    .link-banner{
+        display: none;
+    }    
 }
 @media (min-width: 1001px) {
+    .koutwear1 {
+        margin-top: 4%;
+    }
     .product-links {
         grid-template-columns: repeat(5, 19%); /* Define colunas com largura relativa de 25% */
         gap: 15px; /* Espaço entre as células do grid */
@@ -1077,9 +1083,7 @@ section.slider {
 }   
 @media (max-width: 428px) {
 
-    .link-banner{
-        display: none;
-    }    
+
     .show {
         flex-direction: column;
     }
@@ -1146,6 +1150,9 @@ section.slider {
     .cookie-alert {
         justify-content: space-between;
     }
+    #cookieAlert{
+        width: 40%;
+    }
     .buttons {
         flex-direction: row;
         gap: 10px;
@@ -1157,6 +1164,7 @@ section.slider {
     .cookie-alert button {
         width: auto;
     }
+
 }
 @media (min-width: 2000px) {
     #searchInput {
