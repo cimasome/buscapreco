@@ -21,15 +21,109 @@ body {
     border-radius: 10px;
     max-width: 100%;
 }
+ /* Estilo do modal */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10%;
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1200px;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    position: relative; /* Para posicionar o botão de fechar no canto */
+}
+
+/* Botão de fechar (X) */
+.close {
+    color: #aaa;
+    font-size: 3.5vh;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Contêiner dos botões */
+.btn-row {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre os botões */
+    margin-top: 20px;
+}
+
+/* Estilo dos botões */
+.action-button {
+    flex: 1; /* Cada botão ocupa o mesmo espaço */
+    font-size: 2.3vh;
+    margin: 1%; /* Espaço entre os botões */
+    padding: 1.5%;
+    color: #fff;
+    background-color: #007bff; /* Azul */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Cor de fundo ao passar o mouse */
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+/* Botão separado */
+.action-button:first-child {
+    background-color: #28a745; /* Verde para "Ver mais produtos" */
+}
+
+.action-button:first-child:hover {
+    background-color: #218838;
+}
 .comprou{
     width: 95%;
-    margin: 2.4%;
-    background-color: #dee0ff;
-    border-radius: 10px;
-    padding: 3%;
+    margin: 0 auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.arrow-button {
+    color: black; /* Cor do texto e ícone */
+    font-size: 2vh; /* Tamanho da fonte, ajuste conforme necessário */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-bottom: 2%;
+    padding: 2%;
+    margin: 0;
+    font-weight: 400;
+    background-color: rgba(242, 242, 242, 0.538);
+    margin-top: 2%;
 }
 .produto-title {
     font-size: 4vh; /* Ajuste o tamanho da fonte conforme necessário */
@@ -172,7 +266,17 @@ body {
     .produto-imagens-mobile {
         display: flex;
     }
+    .lateral{
+        flex-direction: column;
+    }
 }
+
+@media (min-width: 2000px) {
+    .comprou{
+        width: 50%;
+    } 
+}
+
 
 .produto-detalhes {
     text-align: center;
@@ -341,7 +445,7 @@ body {
     margin-bottom: 2%;
     padding: 2%;
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
     background-color: rgba(255, 255, 255, 0.200);
     margin-top: 2%;
 }
@@ -407,7 +511,6 @@ body {
 .lista-personalizada li {
     margin-bottom: 30px; /* Mantém espaçamento entre os itens */
     font-size: 1.9vh;
-
 }
 .video-container {
     width: 50vw; /* Define a largura do container como metade da largura da tela */
@@ -492,9 +595,10 @@ body {
     font-size: 18px;
 }
 @media (max-width: 1000px){
-
+    .btn-row {
+        flex-direction: column;        }
     .arrow-button {
-        width: 50%;
+        width: 55%;
     }
     .logo img {
         max-width: 50%;
@@ -568,5 +672,11 @@ body {
 @media (min-width: 1001px) {
     .header a i{
         font-size: 2vh;
+    }
+    .bannerbaixo{
+        width: 75%;
+    }
+    .comprou{
+        width: 70%;
     }
 }
