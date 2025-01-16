@@ -527,7 +527,7 @@ body {
 }
 .logo {
     flex: 1;
-    max-width: 1000px;
+    max-width: 750px;
     display: flex;
     justify-content: center;
 }
