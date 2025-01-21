@@ -344,7 +344,7 @@ section.slider {
     width: 90%;
     display: flex;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 .submarcas img {
@@ -748,7 +748,14 @@ section.slider {
     color: white;
 }
 /* Estilo para os botões do alerta de cookies */
-
+.pgt{
+    display: flex;
+    padding-top: 3%;
+    justify-content: center;
+}
+.pgt img{
+    width: 95%;
+}
 .cookie-alert {
     width: 100%;
     display: none;
@@ -1043,6 +1050,9 @@ section.slider {
 @media (min-width: 1001px) {
     .koutwear1 {
         margin-top: 4%;
+    }
+    .pgt img{
+        width: 40%;
     }
     .product-links {
         grid-template-columns: repeat(5, 19%); /* Define colunas com largura relativa de 25% */
