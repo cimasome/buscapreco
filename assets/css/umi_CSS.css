@@ -258,25 +258,14 @@ body {
     display: none;
 }
 
-/* Exibe as imagens mobile em telas de até 1000px */
-@media (max-width: 1000px) {
-    .produto-imagens-secundarias {
-        display: none;
-    }
-    .produto-imagens-mobile {
-        display: flex;
-    }
-    .lateral{
-        flex-direction: column;
-    }
-}
-
 @media (min-width: 2000px) {
     .comprou{
         width: 50%;
     } 
+    .caixa-conteudo{
+        max-width: 50%;
+    }
 }
-
 
 .produto-detalhes {
     text-align: center;
@@ -292,50 +281,88 @@ body {
     cursor: pointer; /* Adiciona um cursor de mão para indicar que é clicável */
 }
 .produto-ofertas {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    position: relative;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 5%;
 }
-
 .oferta-botao {
+    text-decoration: none;
     background: #90ee90;
-    background-size: 400% 400%;
     color: #090909;
     border-radius: 10px;
     font-weight: bold;
-    padding: 1%;
-    width: 30%;
-    max-width: 90%;
+    padding: 3% 4%;
+    font-size: 3.5vh;
     border: 0;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: gradienteAnimado 3s infinite, flip 3s infinite;
 }
-.botao{
-    background: #90ee90;
-    color: #090909;
-    font-weight: bold;
-    width: 100%;
-    border: 0;
-    white-space: nowrap;
-    font-size: 3.5vh;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: gradienteAnimado 3s infinite, flip 3s infinite;
-}
-
 .oferta-botao:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Caixa de Escolha Styles */
+.caixa-escolha {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.caixa-conteudo {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 2%;
+    border: 1px solid #888;
+    width: 80%; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.caixa-links {
+    width: 100%;
+    display: flex;
+    background: #90ee9000;
+    color: #090909;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 2%;
+}
+
+.caixa-links a{
+    border: 1px solid;
+    border-radius: 10px;
+}
+.caixa-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caixa-img{
+    width: 50%;
+}
+
+.fechar {
+    color: #8c2020;
+    float: right;
+    font-size: 3.5vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+}
 
 /* Animação de virar de um lado para o outro */
 @keyframes flip {
@@ -349,11 +376,6 @@ body {
         transform: rotateY(-15deg); /* Inclina para a esquerda */
     }
 }
-.oferta-botao:hover {
-    transform: translate(-50%, -5px); /* Ajusta a animação do hover para funcionar com o botão fixo */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
 
 @keyframes slideUp {
     from {
@@ -594,89 +616,119 @@ body {
 .search-container button i {
     font-size: 18px;
 }
+.pgt{
+    display: flex;
+    padding-top: 3%;
+    justify-content: center;
+}
+.pgt img{
+    width: 95%;
+}
+
 @media (max-width: 1000px){
+
     .btn-row {
-        flex-direction: column;        }
+        flex-direction: column;        
+    }
+
     .arrow-button {
         width: 55%;
     }
     .logo img {
         max-width: 50%;
         height: auto;
-}
-.video-container {
-    width: 100%; /* Ocupa toda a largura da tela */
-    max-width: 100vw; /* Garante que a largura não exceda a tela */
-    height: auto; /* Ajusta a altura automaticamente com base na largura */
-    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo (16:9 para vídeos do YouTube) */
-    margin-bottom: 5%;
-}
-.video-container iframe {
-    width: 100%; /* Faz com que o iframe ocupe toda a largura do container */
-    height: 100%; /* Faz com que o iframe ocupe toda a altura do container */
-    border: none; /* Remove a borda padrão do iframe */
-}
-.produto-nome{
-    font-size: 2vh;
-    width: auto;
-}
-.produto-imagens-secundarias img {
-    max-width: 120px;
-}
-.produto-oferta{
-    font-size: 2.5vh; /* Tamanho da fonte, ajuste conforme necessário */
-    font-weight: bold;
-}
-.produto-title {
-    font-size: 2.7vh; /* Ajuste o tamanho da fonte conforme necessário */
-    text-wrap: nowrap;
-}
-.oferta-botao {
-    width: 100%;
-    margin-bottom: 5%;
-}
-.descricao li {
-    margin-bottom: 5%; /* Adiciona espaçamento entre os tópicos */
-    font-size: 3vh;
+    }
+    .video-container {
+        width: 100%; /* Ocupa toda a largura da tela */
+        max-width: 100vw; /* Garante que a largura não exceda a tela */
+        height: auto; /* Ajusta a altura automaticamente com base na largura */
+        aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo (16:9 para vídeos do YouTube) */
+        margin-bottom: 5%;
+    }
+    .video-container iframe {
+        width: 100%; /* Faz com que o iframe ocupe toda a largura do container */
+        height: 100%; /* Faz com que o iframe ocupe toda a altura do container */
+        border: none; /* Remove a borda padrão do iframe */
+    }
+    .produto-nome{
+        font-size: 2vh;
+        width: auto;
+    }
+    .produto-imagens-secundarias img {
+        max-width: 120px;
+    }
+    .produto-oferta{
+        font-size: 2.5vh; /* Tamanho da fonte, ajuste conforme necessário */
+        font-weight: bold;
+    }
+    .produto-title {
+        font-size: 2.7vh; /* Ajuste o tamanho da fonte conforme necessário */
+        text-wrap: nowrap;
+    }
+    .oferta-botao {
+        padding: 3%;
+        width: 90%;
+    }
+    .descricao li {
+        margin-bottom: 5%; /* Adiciona espaçamento entre os tópicos */
+        font-size: 3vh;
+    }
+    .descricao p {
+        margin-bottom: 5%;
+        font-size: 2vh;
+        color: #555; /* Cor da descrição */
+    }
+    .vidtext{
+        flex-direction: column-reverse;
+    }
+    .descricao {
+        width: 100%;
+    }
+    .header {
+        font-size: 1.9vh;
+        align-items: start;
+        padding-top: 5%;
+    }
+    .btn-cont {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
+        grid-template-rows: repeat(2, auto); /* 2 linhas, ajustando a altura automaticamente */
+        padding:1%;
+    }
+    .caixa-escolha {
+        font-size: 2vh;
+    }
+
+    .caixa-conteudo{
+        width: 80%;
+    }
+
+    .caixa-img{
+        width: 100%;
+    }
+    /* Exibe as imagens mobile em telas de até 1000px */
+    .produto-imagens-secundarias {
+        display: none;
+    }
+    .produto-imagens-mobile {
+        display: flex;
+    }
+    .lateral{
+        flex-direction: column;
+    }
 }
 
-.descricao p {
-    margin-bottom: 5%;
-    font-size: 2vh;
-    color: #555; /* Cor da descrição */
-}
-.vidtext{
-    flex-direction: column-reverse;
-}
-.descricao {
-    width: 100%;
-}
-.header {
-    font-size: 1.9vh;
-    align-items: start;
-    padding-top: 5%;
-}
-.btn-cont {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
-    grid-template-rows: repeat(2, auto); /* 2 linhas, ajustando a altura automaticamente */
-    padding:1%;
-}
-.produto-ofertas {
-    width: 100%;   
-}
-.oferta-botao {
-    padding: 3%;
-    width: 90%;
-}
-}
 @media (min-width: 1001px) {
     .header a i{
         font-size: 2vh;
     }
     .bannerbaixo{
         width: 75%;
+        height: 50%;
     }
     .comprou{
         width: 70%;
+    }
+    .pgt img{
+        width: 40%;
     }
 }
