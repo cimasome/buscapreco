@@ -108,7 +108,7 @@
         </div>
         <img src="assets/images/umi_campaing/umi1.webp" style="display: flex;"> 
 
-            <h2 class="subtitulo">Destaques do Produto</h2>
+            <h2 class="subtitulo"><i class="fa-solid fa-star"></i> Destaques do Produto</h2>
             <ul class="lista-personalizada"> 
                 <li><strong>Iluminação RGB com Efeito Chama:</strong> O aparelho conta com um sistema de iluminação RGB que cria um efeito de chama em várias cores diferentes, proporcionando um ambiente relaxante e acolhedor, trazendo versatilidade para deixar o espaço de acordo com o seu gosto</li>
                 <li><strong>Fácil de Usar:</strong><br> Basta adicionar água e óleos essenciais para iniciar a difusão. Não é obrigatório o uso de óleos essenciais, mas para aromatizar é necessário usá-los.</li>
@@ -119,7 +119,7 @@
 
             <div class="lateral" style="display:flex;">
                 <div style="width: 100%;">
-                    <h2 class="subtitulo">Especificações</h2>
+                    <h2 class="subtitulo"><i class="fa-solid fa-bars"></i> Especificações</h2>
                     <ul class="lista-personalizada">
                         <li><strong>Fonte de Alimentação:</strong><br> Cabo USB (recomendado usar fonte de 5V e 2A)</li>
                         <li><strong>Capacidade do Tanque de Água:</strong><br> 180ml</li>
@@ -132,11 +132,51 @@
 
     </div>
 </section>
+    
     <div class="produto-ofertas">
-        <a href="https://s.click.aliexpress.com/e/_Dkpz1ib" class="oferta-botao">
-            <button class="botao">Comprar <i class="fa-solid fa-cart-shopping"></i></button>
-        </a>
+        <button class="oferta-botao" id="comprar">Comprar <i class="fa-solid fa-cart-shopping"></i></button>
     </div>
+
+    <!-- Caixa de Escolha -->
+    <div id="caixa" class="caixa-escolha">
+        <div class="caixa-conteudo">
+            <span class="fechar" id="fecharCaixa">&times;</span>
+            <h2>Escolha onde comprar</h2>
+
+            <div class="caixa-links">
+                <a href="https://amzn.to/40tpqKA" target="_blank">
+                    <img class="caixa-img" src="assets/images/amazon.webp" alt="Amazon Logo">
+                </a>
+                <a href="https://s.click.aliexpress.com/e/_optU6cv" target="_blank">
+                    <img class="caixa-img" src= "assets/images/aliexpress.webp" alt="AliExpress Logo">
+                </a>
+                <a href="https://s.shopee.com.br/3Arxp3Lnmq" target="_blank">
+                    <img class="caixa-img" style="padding-top: 6%;" src= "assets/images/shopee.webp" alt="AliExpress Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const caixa = document.getElementById('caixa');
+        const comprarButton = document.getElementById('comprar');
+        const fecharCaixa = document.getElementById('fecharCaixa');
+
+        comprarButton.addEventListener('click', () => {
+            caixa.style.display = 'block';
+        });
+
+        fecharCaixa.addEventListener('click', () => {
+            caixa.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === caixa) {
+                caixa.style.display = 'none';
+            }
+        });
+    </script>
+
 
     <div class="pgt">
         <img src="assets/images/pgt.webp" alt="Logo" class="interactive-img">
