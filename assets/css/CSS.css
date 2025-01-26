@@ -873,6 +873,22 @@ section.slider {
     max-width: 100%;
     height: auto;
 }
+.divulgacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divulgacao a{
+    margin-top: 2%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #000000;
+}
+.img-dvg{
+    width: 20%;
+}
 /* Aqui encerra a pagina sobre nós*/
  /* aqui inicia a responsividade e definiçoes da pagina*/
 .tudo {
@@ -885,6 +901,9 @@ section.slider {
     }
 }
 @media (max-width: 1000px) {
+    .img-dvg{
+        width: 40%;
+    }
     .submarcas {
         flex-direction: column;
      }
