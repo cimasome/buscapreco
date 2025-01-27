@@ -231,9 +231,12 @@ section.slider {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens de produtos se ajustem em linhas */
     gap: 10px; /* Espaçamento entre itens */
+    padding-top: 1%;
+    width: 100%;
 }
 
 .suggestion-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column; /* Ajusta a direção dos itens para coluna */
     align-items: center;
